@@ -4,9 +4,9 @@ const Login = () => {
   return (
     <div className='bg-body-400 grid justify-center items-center h-screen w-screen font-main'> 
       <div className='bg-body-300 w-[100vw] h-[100vh] shadow-md rounded-lg sm:w-[65vw] sm:h-auto lg:w-[60vw]'>
-        <div className='flex w-[100%] justify-center border-b border-body-400'>
+        <div className='flex w-[100%] justify-center border-b border-body-400 mt-2 mr-2'>
           <div className='ml-2 w-[50%] text-center px-2 py-6 hover:cursor-pointer font-bold'>Login</div>
-          <div className='ml-2 w-[50%] text-center px-2 py-6 bg-body-400 hover:cursor-pointer font-bold'>Register</div>
+          <div className='ml-2 w-[50%] text-center px-2 py-6 bg-body-400 hover:cursor-pointer font-bold mr-2'>Register</div>
         </div>
         <div className='flex justify-between'>
             <img src="src/assets/jason-briscoe-UV81E0oXXWQ-unsplash.jpg" className='w-[40%] mx-6 my-4 ml-9 rounded-lg hidden sm:block'/>
