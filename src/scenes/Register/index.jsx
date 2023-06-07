@@ -41,7 +41,7 @@ const Register = () => {
                 <button type="submit"className='py-2 text-body-300 bg-cred-500 w-[100%] rounded-lg border-2 border-cred-500 my-4 hover:bg-body-300 hover:text-cred-500'>Sign Up</button>
               </div>
               </form>
-            <div className='flex justify-center'>
+            <div className='flex justify-center pb-2'>
               <p className='text-sm'>Already have an account? <a href='/' className='text-cred-500'>Log in</a></p>
             </div>
           </div>
