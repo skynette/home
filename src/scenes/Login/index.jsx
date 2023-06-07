@@ -23,17 +23,19 @@ const Login = () => {
             </div>
             <div className='bg-body-300 relative left-[50%] inline text-body-500'>or</div>
             <hr />
-            <input name="name" type='text' placeholder=' User Name Or Email' className='block my-5 w-[90%] py-3 px-2 rounded-lg !outline-none border border-body-400 text-sm'/>
-            <input name="password" type='password' placeholder=' Password' className='block my-5 w-[90%] py-3 px-2 rounded-lg !outline-none border border-body-400 text-sm' />
-            <div className='flex justify-between'>
-              <label htmlFor="remember"><input id='remember' name="check" type='checkbox' className='accent-cred-500'/><span className='text-sm'> Remember me</span></label>
-              <a href='/'  className="text-cblue-500 text-sm">Lost Your Password?</a>
-            </div>
+            <form action="/">
+              <input name="name" type='text' placeholder=' User Name Or Email' className='block my-5 w-[90%] py-3 px-2 rounded-lg !outline-none border border-body-400 text-sm'/>
+              <input name="password" type='password' placeholder=' Password' className='block my-5 w-[90%] py-3 px-2 rounded-lg !outline-none border border-body-400 text-sm' />
+              <div className='flex justify-between'>
+                <label htmlFor="remember"><input id='remember' name="check" type='checkbox' className='accent-cred-500'/><span className='text-sm'> Remember me</span></label>
+                <a href='/'  className="text-cblue-500 text-sm">Lost Your Password?</a>
+              </div>
+              <div className='flex justify-center'>
+               <button type="submit" className='py-2 text-body-300 bg-cred-500 w-[100%] rounded-lg border-2 border-cred-500 my-4 hover:bg-body-300 hover:text-cred-500'>Log In</button>
+              </div>
+              </form>
             <div className='flex justify-center'>
-              <button className='py-2 text-body-300 bg-cred-500 w-[100%] rounded-lg border-2 border-cred-500 my-4 hover:bg-body-300 hover:text-cred-500'>Log In</button>
-            </div>
-            <div className='flex justify-center'>
-              <p className='text-sm'>Dont have an account? <a href='/' className='text-cred-500'>Register</a></p>
+              <p className='text-sm'>Dont have an account? <a href='/register' className='text-cred-500'>Register</a></p>
             </div>
           </div>
         </div>
