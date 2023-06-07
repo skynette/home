@@ -24,10 +24,10 @@ const Login = () => {
             <div className='bg-body-300 relative left-[50%] inline text-body-500'>or</div>
             <hr />
             <form action="/">
-              <input name="name" type='text' placeholder=' User Name Or Email' className='block my-5 w-[90%] py-3 px-2 rounded-lg !outline-none border border-body-400 text-sm'/>
-              <input name="password" type='password' placeholder=' Password' className='block my-5 w-[90%] py-3 px-2 rounded-lg !outline-none border border-body-400 text-sm' />
+              <input name="name" type='text' placeholder=' User Name Or Email' className='block my-5 w-[90%] py-3 px-2 rounded-lg !outline-none border border-body-400 text-sm'required/>
+              <input name="password" type='password' placeholder=' Password' className='block my-5 w-[90%] py-3 px-2 rounded-lg !outline-none border border-body-400 text-sm' required/>
               <div className='flex justify-between'>
-                <label htmlFor="remember"><input id='remember' name="Remember" type='checkbox' className='accent-cred-500'/><span className='text-sm'> Remember me</span></label>
+                <label htmlFor="remember"><input id='remember' name="Remember" type='checkbox' className='accent-cred-500' required/><span className='text-sm'> Remember me</span></label>
                 <a href='/'  className="text-cblue-500 text-sm">Lost Your Password?</a>
               </div>
               <div className='flex justify-center'>

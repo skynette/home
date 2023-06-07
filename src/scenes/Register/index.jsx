@@ -24,18 +24,18 @@ const Register = () => {
             <div className='bg-body-300 relative left-[50%] inline text-body-500'>or</div>
             <hr />
             <form action="/">
-            < input name="name" type='text' placeholder=' User Name' className='block my-3 w-[90%] py-3 px-2 rounded-lg !outline-none border border-body-400 text-sm'/>
-              <input name="email" type='email' placeholder=' Email' className='block my-3 w-[90%] py-3 px-2 rounded-lg !outline-none border border-body-400 text-sm' />
-              <input name="password" type="password" placeholder=' Password' className='block my-3 w-[90%] py-3 px-2 rounded-lg !outline-none border border-body-400 text-sm'/>
-              <input name="confirm" type="password" placeholder=' Re-enter password'className='block my-3 w-[90%] py-3 px-2 rounded-lg !outline-none border border-body-400 text-sm'/>
-              <input list="mode" name="modes" id="modes" placeholder=' Select the mode of use' className='block my-3 w-[90%] py-3 px-2 rounded-lg !outline-none border border-body-400 text-sm'/>
+            < input name="name" type='text' placeholder=' User Name' className='block my-3 w-[90%] py-3 px-2 rounded-lg !outline-none border border-body-400 text-sm' required/>
+              <input name="email" type='email' placeholder=' Email' className='block my-3 w-[90%] py-3 px-2 rounded-lg !outline-none border border-body-400 text-sm' required/>
+              <input name="password" type="password" placeholder=' Password' className='block my-3 w-[90%] py-3 px-2 rounded-lg !outline-none border border-body-400 text-sm' required/>
+              <input name="confirm" type="password" placeholder=' Re-enter password'className='block my-3 w-[90%] py-3 px-2 rounded-lg !outline-none border border-body-400 text-sm'required/>
+              <input list="mode" name="modes" id="modes" placeholder=' Select the mode of use' className='block my-3 w-[90%] py-3 px-2 rounded-lg !outline-none border border-body-400 text-sm'required/>
                 <datalist id="mode">
                   <option value="Single User"/>
                   <option value="Agent"/>
                   <option value="Multi User"/>
                 </datalist>
               <div className='flex justify-between'>
-                <label htmlFor="terms"><input id='terms' name="terms" type='checkbox' className='accent-cred-500'/><span className='text-sm'> I have accepeted the Terms and Privacy Policy</span></label>
+                <label htmlFor="terms"><input id='terms' name="terms" type='checkbox' className='accent-cred-500' required/><span className='text-sm'> I have accepeted the Terms and Privacy Policy</span></label>
               </div>
               <div className='flex justify-center'>
                 <button type="submit"className='py-2 text-body-300 bg-cred-500 w-[100%] rounded-lg border-2 border-cred-500 my-4 hover:bg-body-300 hover:text-cred-500'>Sign Up</button>
