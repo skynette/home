@@ -4,6 +4,11 @@ import Register from './scenes/Register';
 import Login from './scenes/Login';
 import Home from './scenes/Home';
 import Profile from './scenes/Profile';
+import SearchFeed from './scenes/SearchFeed';
+import Upload from './scenes/Upload';
+import HouseDetail from './scenes/HouseDetail';
+import ProfileDetail from './scenes/ProfileDetail';
+import EditProfile from './scenes/EditProfile';
 
 
 const App = () => {
