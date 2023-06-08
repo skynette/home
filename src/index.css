@@ -8,3 +8,18 @@
 /* #7570FA blue */
 /* #EEF60C dark yellow */
 /* #5D57F9 dark blue */
+
+#remember:checked{
+    background-color: #FA7170;
+}
+#remember:checked ~ .check-1{
+    opacity:100;
+    color: white;
+}
+#terms:checked{
+    background-color: #FA7170;
+}
+#terms:checked ~ .check-1{
+    opacity:100;
+    color: white;
+}
