@@ -7,14 +7,20 @@ const Login = () => {
         navigate("/register")
     }
     return (
-        <div className='bg-body-400 grid justify-center items-center h-screen w-screen font-main'>
-            <div className='bg-body-300 w-[100vw] h-[100vh] shadow-md rounded-lg sm:w-[65vw] sm:h-auto lg:w-[60vw]'>
+        <div className='bg-body-400 h-screen flex flex-col justify-center items-center font-main p-6 md:p-10'>
+            <div className='bg-body-300 w-full h-full shadow-md rounded-lg sm:w-[65vw] sm:h-auto lg:w-[60vw]'>
                 <div className='flex w-[100%] justify-center items-center border-b border-body-400 mt-2 mr-2'>
                     <div className='ml-2 w-[50%] text-center px-2 py-6 hover:cursor-pointer font-bold'>Login</div>
                     <div className='ml-2 w-[50%] text-center px-2 py-6 bg-body-400 rounded-t-lg hover:cursor-pointer font-bold mr-2' onClick={handleClick}>Register</div>
                 </div>
-                <div className='flex justify-around items-center'>
-                    <img src="src/assets/jason-briscoe-UV81E0oXXWQ-unsplash.jpg" style={{ objectFit: 'cover', objectPosition: 'center' }} className='w-[40%] mx-6 my-4 ml-9 rounded-lg hidden sm:block' />
+
+                {/* main content */}
+                <div className='flex justify-around items-center sm:px-5'>
+
+                    {/* left side */}
+                    <img src="src/assets/jason-briscoe-UV81E0oXXWQ-unsplash.jpg" style={{ objectFit: 'cover', objectPosition: 'center' }} className='sm:w-[40%]  mx-6 my-4 rounded-lg hidden sm:block' />
+
+                    {/* right side */}
                     <div className='mx-6 my-4 w-[100%] sm:w-[45%]'>
                         <h2 className='font-bold text-cblue-500'>Login</h2>
                         <div className='flex justify-around my-5 border border-cblue-500 text-cblue-500 fill-cblue-500 rounded-lg py-3 w-[100%] hover:bg-cblue-500 hover:cursor-pointer hover:fill-body-300 hover:text-body-300'>
