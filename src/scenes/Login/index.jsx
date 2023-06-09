@@ -18,7 +18,7 @@ const Login = () => {
                 <div className='flex justify-around items-center sm:px-5'>
 
                     {/* left side */}
-                    <img src="src/assets/jason-briscoe-UV81E0oXXWQ-unsplash.jpg" style={{ objectFit: 'cover', objectPosition: 'center' }} className='sm:w-[40%]  mx-6 my-4 rounded-lg hidden sm:block' />
+                    <img src="src/assets/jason-briscoe-UV81E0oXXWQ-unsplash.jpg" style={{ objectPosition: 'center' }} className='sm:w-[40%]  mx-6 my-4 rounded-lg hidden sm:block' />
 
                     {/* right side */}
                     <div className='mx-6 my-4 w-[100%] sm:w-[45%]'>
