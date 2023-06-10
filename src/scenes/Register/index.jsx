@@ -32,11 +32,11 @@ const Register = () => {
                         <h2 className='font-bold text-cblue-500'>Register</h2>
                         <div className='flex my-5 border border-cblue-500 text-cblue-500 fill-cblue-500 rounded-lg py-3 w-[100%] hover:bg-cblue-500 hover:cursor-pointer hover:fill-body-300 hover:text-body-300 px-4'>
                             <FaFacebookF className='h-6 w-6 flex-shrink-0' />
-                            <p className='flex-grow text-center'>Login with Facebook</p>
+                            <p className='flex-grow text-center'>Sign Up with Facebook</p>
                         </div>
                         <div className='flex my-5 border border-cred-500 text-cred-500 fill-cred-500 rounded-lg py-3 w-[100%] hover:bg-cred-500 hover:cursor-pointer hover:fill-body-300 hover:text-body-300 px-4'>
                             <FaGoogle className='h-6 w-6 flex-shrink-0' />
-                            <p className='flex-grow text-center'>Login with Google</p>
+                            <p className='flex-grow text-center'>Sign Up with Google</p>
                         </div>
                         <div className='bg-body-300 relative left-[50%] inline text-body-500'>or</div>
                         <hr />
