@@ -34,7 +34,7 @@ const Hero = () => {
       <div className="flex gap-1 items-center bg-body-300 p-1 rounded-md text-body-600 w-[80%] my-4">
         <input type="text" name="title" placeholder="Title" className="w-1/4 px-4 py-2 outline-none" />
         <div className="relative w-1/4">
-          <select name="category" className="border border-gray-300 rounded-md w-full py-2 px-4">
+          <select name="category" className="border border-gray-300 rounded-md w-full py-2 px-4 outline-none">
             <option value="">All Categories</option>
             <option value="Option 1">Option 1</option>
             <option value="Option 2">Option 2</option>
@@ -42,7 +42,7 @@ const Hero = () => {
           </select>
         </div>
         <div name="locations" className="relative w-1/4">
-          <select className="border border-gray-300 rounded-md w-full py-2 px-4">
+          <select className="border border-gray-300 rounded-md w-full py-2 px-4 outline-none">
             <option value="">All locations</option>
             <option value="Option 1">Option 1</option>
             <option value="Option 2">Option 2</option>

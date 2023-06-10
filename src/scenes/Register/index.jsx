@@ -81,7 +81,7 @@ const Register = () => {
                             </div>
                         </form>
                         <div className='flex justify-center pb-2'>
-                            <p className='text-sm'>Already have an account? <a href='/' className='text-cred-500'>Log in</a></p>
+                            <p className='text-sm'>Already have an account? <a href='/login' className='text-cred-500'>Log in</a></p>
                         </div>
                     </div>
                 </div>
