@@ -7,9 +7,21 @@ const Hero = () => {
         <p className="text-center mt-4">Explore whatever</p>
       </div>
 
+      {/* buy or rent */}
+      <div className="flex gap-4">
+        <div className="relative cursor-pointer z-[10] bg-body-300 px-6 py-3 rounded-md text-body-600">
+          <p>Buy</p>
+          <div className="absolute bg-body-300 bottom-[-1] left-[-1] h-6 w-6 border-1 rotate-45"></div>
+        </div>
+        <div className="relative cursor-pointer z-[10] bg-cred-500 px-6 py-3 rounded-md text-body-300">
+          <p>Rent</p>
+          <div className="absolute bg-cred-500 bottom-[-1] left-[-1] h-6 w-6 border-1 rotate-45"></div>
+        </div>
+      </div>
+
+      {/* search and filter inputs */}
       <div className="flex gap-1 items-center bg-body-300 p-1 rounded-md text-body-600 w-[80%] my-4">
-        {/* search and filter inputs */}
-        <input type="text" name="title" placeholder="Title" className="w-1/4 px-4 py-2 outline-none"/>
+        <input type="text" name="title" placeholder="Title" className="w-1/4 px-4 py-2 outline-none" />
         <div className="relative w-1/4">
           <select name="category" className="border border-gray-300 rounded-md w-full py-2 px-4">
             <option value="">All Categories</option>

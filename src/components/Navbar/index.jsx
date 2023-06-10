@@ -8,7 +8,7 @@ const Navbar = () => {
       <nav className={`h-16 ${flexBetween}`}>
         {/* left side */}
         <div>
-          <h1 className="text-2xl text-white">Home</h1>
+          <h1 className="text-2xl text-white hover:cursor-pointer">Home</h1>
         </div>
 
         {/* right side */}
