@@ -9,7 +9,7 @@ const Register = () => {
     let navigate = useNavigate();
 
     const handleClick = () => {
-        navigate("/")
+        navigate("/login")
     }
     return (
         <div className='bg-body-400 h-screen flex flex-col justify-center items-center font-main p-6 md:p-10'>
