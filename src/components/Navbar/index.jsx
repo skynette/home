@@ -17,7 +17,7 @@ const Navbar = () => {
             <li className="text-white">About</li>
             <li className="text-white">Contact</li>
             <li className="text-white">Login</li>
-            <li className="text-white px-2 py-1 rounded-md border border-white">+ Add Listing</li>
+            <li className="text-white px-2 py-1 rounded-md border border-white mr-4 hover:cursor-pointer hover:bg-body-300 hover:text-body-600">+ Add Listing</li>
             <FaUserCircle className="text-cblue-500 h-7 w-7"/>
           </ul>
         </div>
