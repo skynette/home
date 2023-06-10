@@ -29,3 +29,9 @@ select {
     opacity:100;
     color: white;
 }
+
+.navbar-hero-container {
+    background-image: url('images/hero.jpeg');
+    background-size: cover;
+    background-position: center;
+  }
