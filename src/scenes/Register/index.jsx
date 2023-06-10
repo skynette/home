@@ -2,9 +2,10 @@ import { FaFacebookF, FaGoogle } from 'react-icons/fa';
 import { HiLockClosed, HiUser } from 'react-icons/hi';
 import { useNavigate } from 'react-router-dom';
 import { MdEmail } from 'react-icons/md';
+import { AiOutlineCaretDown } from 'react-icons/ai';
 
 const Register = () => {
-
+    const iconClasses = "absolute top-3 left-[90%] sm:left-[85%] lg:left-[90%] h-6 w-6 text-body-500"
     let navigate = useNavigate();
 
     const handleClick = () => {
@@ -41,22 +42,22 @@ const Register = () => {
                         <hr />
                         <form action="/">
                             <div className='relative'>
-                                <HiUser className="absolute top-3 left-[90%] sm:left-[85%] lg:left-[90%] h-6 w-6 text-body-500" />
+                                <HiUser className={iconClasses} />
                                 <input name="name" type='text' placeholder=' User Name' className='block my-5 w-full py-3 px-2 rounded-lg outline-none border border-body-400 text-sm' required />
                             </div>
 
                             <div className='relative'>
-                                <MdEmail className="absolute top-3 left-[90%] sm:left-[85%] lg:left-[90%] h-6 w-6 text-body-500" />
+                                <MdEmail className={iconClasses} />
                                 <input name="email" type='email' placeholder='Email' className='block my-3 w-full py-3 px-2 rounded-lg !outline-none border border-body-400 text-sm' required />
                             </div>
 
                             <div className='relative'>
-                                <HiLockClosed className='absolute top-3 left-[90%] sm:left-[85%] lg:left-[90%] h-6 w-6 text-body-500' />
+                                <HiLockClosed className={iconClasses} />
                                 <input name="password" type='password' placeholder='Password' className='block my-5 w-full py-3 px-2 rounded-lg outline-none border border-body-400 text-sm' required />
                             </div>
 
                             <div className='relative'>
-                                <HiLockClosed className='absolute top-3 left-[90%] sm:left-[85%] lg:left-[90%] h-6 w-6 text-body-500' />
+                                <HiLockClosed className={iconClasses} />
                                 <input name="password" type='password' placeholder='Re Enter Password' className='block my-5 w-full py-3 px-2 rounded-lg outline-none border border-body-400 text-sm' required />
                             </div>
 
@@ -67,6 +68,7 @@ const Register = () => {
                                     <option value="Agent">Agent</option>
                                     <option value="Multi User">Multi User</option>
                                 </select>
+                                <AiOutlineCaretDown className={iconClasses}/>
                             </div>
 
                             <div className='flex justify-between'>

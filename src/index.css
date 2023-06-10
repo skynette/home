@@ -8,6 +8,12 @@
 /* #7570FA blue */
 /* #EEF60C dark yellow */
 /* #5D57F9 dark blue */
+select {
+    /* for Firefox */
+    -moz-appearance: none;
+    /* for Chrome */
+    -webkit-appearance: none;
+  }
 
 #remember:checked{
     background-color: #FA7170;
