@@ -1,5 +1,16 @@
+import { useState } from "react"
 
 const Hero = () => {
+  const [isBuy, setIsBuy] = useState(true)
+
+  const handleBuy = () => {
+    setIsBuy(true)
+  }
+  const handleRent = () => {
+    setIsBuy(false)
+
+  }
+
   return (
     <div className="h-[95vh] flex flex-col justify-center items-center text-white gap-4">
       <div className="">
@@ -9,13 +20,13 @@ const Hero = () => {
 
       {/* buy or rent */}
       <div className="flex gap-4">
-        <div className="relative cursor-pointer z-[10] bg-body-300 px-6 py-3 rounded-md text-body-600">
+        <div onClick={handleBuy} className={`relative cursor-pointer z-[10] ${isBuy ? 'bg-cred-500 text-body-300' : 'bg-body-300 text-body-600'}  px-6 py-3 rounded-md`}>
           <p>Buy</p>
-          <div className="absolute bg-body-300 bottom-[-1] left-[-1] h-6 w-6 border-1 rotate-45"></div>
+          {isBuy && <div className="absolute bg-cred-500 bottom-[-1] left-[-1] h-6 w-6 border-1 rotate-45"></div>}
         </div>
-        <div className="relative cursor-pointer z-[10] bg-cred-500 px-6 py-3 rounded-md text-body-300">
+        <div onClick={handleRent} className={`relative cursor-pointer z-[10] ${!isBuy ? 'bg-cred-500 text-body-300' : 'bg-body-300 text-body-600'}  px-6 py-3 rounded-md`}>
           <p>Rent</p>
-          <div className="absolute bg-cred-500 bottom-[-1] left-[-1] h-6 w-6 border-1 rotate-45"></div>
+          {!isBuy && <div className="absolute bg-cred-500 bottom-[-1] left-[-1] h-6 w-6 border-1 rotate-45"></div>}
         </div>
       </div>
 
