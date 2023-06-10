@@ -40,12 +40,12 @@ const Login = () => {
                         <hr />
                         <form action="/">
                             <div className='relative'>
-                                <HiUser className="absolute top-3 left-[90%] sm:left-[85%] h-6 w-6 text-body-500" />
+                                <HiUser className="absolute top-3 left-[90%] sm:left-[85%] lg:left-[90%] h-6 w-6 text-body-500" />
                                 <input name="name" type='text' placeholder=' User Name Or Email' className='block my-5 w-full py-3 px-2 rounded-lg outline-none border border-body-400 text-sm' required />
                             </div>
 
                             <div className='relative'>
-                                <HiLockClosed className='absolute top-3 left-[90%] sm:left-[85%] h-6 w-6 text-body-500' />
+                                <HiLockClosed className='absolute top-3 left-[90%] sm:left-[85%] lg:left-[90%] h-6 w-6 text-body-500' />
                                 <input name="password" type='password' placeholder=' Password' className='block my-5 w-full py-3 px-2 rounded-lg outline-none border border-body-400 text-sm' required />
                             </div>
 
