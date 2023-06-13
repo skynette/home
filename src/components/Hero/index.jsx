@@ -42,12 +42,8 @@ const Hero = () => {
           </select>
         </div>
         <div name="locations" className="relative w-1/4">
-          <select className="border border-gray-300 rounded-md w-full py-2 px-4 outline-none">
-            <option value="">All locations</option>
-            <option value="Option 1">Option 1</option>
-            <option value="Option 2">Option 2</option>
-            <option value="Option 3">Option 3</option>
-          </select>
+          <input type="text" placeholder="Location" className="border border-gray-300 rounded-md w-full py-2 px-4 outline-none" />
+            
         </div>
         <button type="button" className="bg-cred-500 text-body-300 px-4 py-2 w-1/4 hover:bg-opacity-80 rounded-lg">Apply</button>
       </div>
