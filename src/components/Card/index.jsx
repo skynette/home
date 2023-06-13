@@ -7,7 +7,7 @@ const Card = (props) => {
     
 
     return (
-        <div className='h-[58vh] w-[93%] bg-body-300 m-2 mt-14 shadow-md hover:shadow-lg transform hover:scale-[1.02] hover:transition-transform hover:duration-500 rounded-lg mb-12 flex flex-col items-center justify-center font-main'>
+        <div className='h-[54vh] w-[93%] bg-body-300 m-2 mt-14 shadow-md hover:shadow-lg transform hover:scale-[1.02] hover:transition-transform hover:duration-500 rounded-lg mb-12 flex flex-col items-center justify-center font-main'>
             <div className="m-2 h-[98%] w-[95%]">
                 <div className="w-[100%] h-[45%] relative">
                     <img src={props.img} className='w-[100%] h-[100%] object-cover  rounded-lg' />
@@ -29,7 +29,7 @@ const Card = (props) => {
                     <p className='text-sm text-body-800'>Baths: {props.baths}</p>
                     <p className='text-sm text-body-800'>SqFt: {props.sqft}</p>
                 </div>
-                <hr className='text-body-800 my-8'/>
+                <hr className='text-body-800 my-6'/>
                 <div className='h-[15%] w-full px-2 flex justify-between items-center'>
                     <div className='flex items-center gap-4'>
                         <img className="h-[50px] w-[50px] object-cover object-top rounded-full" src={props.profileimg}/>
