@@ -7,10 +7,10 @@ const Card = (props) => {
     
 
     return (
-        <div className='h-[54vh] w-[93%] bg-body-300 m-2 mt-14 shadow-md hover:shadow-lg transform hover:scale-[1.02] hover:transition-transform hover:duration-500 rounded-lg mb-12 flex flex-col items-center justify-center font-main'>
+        <div className='h-[58vh] w-[93%] bg-body-300 m-2 mt-14 shadow-md hover:shadow-lg transform hover:scale-[1.02] hover:transition-transform hover:duration-500 rounded-lg mb-12 flex flex-col items-center justify-center font-main'>
             <div className="m-2 h-[98%] w-[95%]">
                 <div className="w-[100%] h-[45%] relative">
-                    <img src={props.img} className='w-[100%] h-[100%] object-cover  rounded-lg' />
+                    <img src={props.img} className='w-[100%] h-[100%] object-cover  rounded-lg'/>
                     <h3 className='font-bold text-body-300 text-xl absolute bottom-2 left-6 z-1'>{props.price}/<span className='text-lg'>mo</span></h3>
                     <div className='flex gap-2 text-sm absolute top-1 left-6'>
                         <div className='bg-cblue-500 p-1 text-center text-body-300'>Featured</div>
