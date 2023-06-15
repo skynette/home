@@ -1,4 +1,19 @@
 import ImageL from "../assets/featured Pages/vu-anh-TiVPTYCG_3E-unsplash.jpg"
+import profile1 from "../assets/featured Pages/alexander-hipp-iEEBWgY_6lA-unsplash.jpg"
+import Image2 from "../assets/featured Pages/todd-kent-178j8tJrNlc-unsplash.jpg"
+import profile2 from "../assets/featured Pages/ryan-hoffman-Ft4p5E9HjTQ-unsplash.jpg"
+import Image3 from "../assets/featured Pages/spacejoy-XpbtQfr9Skg-unsplash.jpg"
+import profile3 from "../assets/featured Pages/jason-moyer-A73ah5JKtVA-unsplash.jpg"
+import Image4 from "../assets/featured Pages/spacejoy-uGWNcejbf2E-unsplash.jpg"
+import Image5 from "../assets/featured Pages/sieuwert-otterloo-aren8nutd1Q-unsplash.jpg"
+import Image6 from "../assets/featured Pages/sidekix-media-wRzBarqn3hs-unsplash.jpg";
+import Image7 from "../assets/featured Pages/ralph-ravi-kayden-mR1CIDduGLc-unsplash.jpg";
+import Image8 from "../assets/featured Pages/r-architecture-2gDwlIim3Uw-unsplash.jpg";
+import Image9 from "../assets/featured Pages/kara-eads-L7EwHkq1B2s-unsplash.jpg";
+import Image10 from "../assets/featured Pages/greg-rivers-rChFUMwAe7E-unsplash.jpg";
+import Image11 from "../assets/featured Pages/fomstock-4ojhpgKpS68-unsplash.jpg";
+import Image12 from "../assets/featured Pages/digital-marketing-agency-ntwrk-g39p1kDjvSY-unsplash.jpg";
+
 const cardGroup = [
     {
         type: "Apartment",
@@ -9,8 +24,7 @@ const cardGroup = [
         beds: "1",
         bath: "1",
         sqft: "8280",
-        profileImg:
-            "../assets/featured Pages/alexander-hipp-iEEBWgY_6lA-unsplash.jpg",
+        profileImg: profile1,
         profileName: "Ali Tufan",
         date: "1 year ago",
         mode: "sale",
@@ -18,14 +32,13 @@ const cardGroup = [
     {
         type: "Bungalow",
         price: "$14000",
-        img: "../assets/featured Pages/todd-kent-178j8tJrNlc-unsplash.jpg",
+        img: Image2,
         name: "Renovated Apartment",
         location: "1421 San Pedro St, Los Angeles CA 900015",
         beds: "2",
         bath: "2",
         sqft: "5280",
-        profileImg:
-            "../assets/featured Pages/ryan-hoffman-Ft4p5E9HjTQ-unsplash.jpg",
+        profileImg: profile2,
         profileName: "Ali Tufan",
         date: "1 year ago",
         mode: "rent",
@@ -33,14 +46,13 @@ const cardGroup = [
     {
         type: "Bungalow",
         price: "$13000",
-        img: "../assets/featured Pages/spacejoy-XpbtQfr9Skg-unsplash.jpg",
+        img: Image3,
         name: "Single Family Home",
         location: "1421 San Pedro St, Los Angeles CA 900015",
         beds: "3",
         bath: "2",
         sqft: "3280",
-        profileImg:
-            "../assets/featured Pages/jason-moyer-A73ah5JKtVA-unsplash.jpg",
+        profileImg: profile3,
         profileName: "Ali Tufan",
         date: "1 year ago",
         mode: "rent",
@@ -48,14 +60,13 @@ const cardGroup = [
     {
         type: "House",
         price: "$11000",
-        img: "../assets/featured Pages/spacejoy-uGWNcejbf2E-unsplash.jpg",
+        img: Image4,
         name: "Gorgeous Villa Bay View",
         location: "1421 San Pedro St, Los Angeles CA 900015",
         beds: "5",
         bath: "5",
         sqft: "5280",
-        profileImg:
-            "../assets/featured Pages/jason-moyer-A73ah5JKtVA-unsplash.jpg",
+        profileImg: profile3,
         profileName: "Ali Tufan",
         date: "1 year ago",
         mode: "rent",
@@ -63,14 +74,13 @@ const cardGroup = [
     {
         type: "Land",
         price: "$17000",
-        img: "../assets/featured Pages/sieuwert-otterloo-aren8nutd1Q-unsplash.jpg",
+        img: Image5,
         name: "Renovated Apartment",
         location: "1421 San Pedro St, Los Angeles CA 900015",
         beds: "4",
         bath: "4",
         sqft: "6280",
-        profileImg:
-            "../assets/featured Pages/alexander-hipp-iEEBWgY_6lA-unsplash.jpg",
+        profileImg: profile1,
         profileName: "Ali Tufan",
         date: "1 year ago",
         mode: "rent",
@@ -78,14 +88,13 @@ const cardGroup = [
     {
         type: "Single Family Home",
         price: "$16000",
-        img: "../assets/featured Pages/sidekix-media-wRzBarqn3hs-unsplash.jpg",
+        img: Image6,
         name: "Gorgeous Villa Bay View",
         location: "1421 San Pedro St, Los Angeles CA 900015",
         beds: "4",
         bath: "2",
         sqft: "9500",
-        profileImg:
-            "../assets/featured Pages/linkedin-sales-solutions-pAtA8xe_iVM-unsplash.jpg",
+        profileImg: Image9,
         profileName: "Ali Tufan",
         date: "1 year ago",
         mode: "rent",
@@ -93,14 +102,13 @@ const cardGroup = [
     {
         type: "Apartment",
         price: "$15000",
-        img: "../assets/featured Pages/ralph-ravi-kayden-mR1CIDduGLc-unsplash.jpg",
+        img: Image7,
         name: "Renovated Apartment",
         location: "1421 San Pedro St, Los Angeles CA 900015",
         beds: "4",
         bath: "3",
         sqft: "10280",
-        profileImg:
-            "../assets/featured Pages/ryan-hoffman-Ft4p5E9HjTQ-unsplash.jpg",
+        profileImg: profile2,
         profileName: "Ali Tufan",
         date: "1 year ago",
         mode: "rent",
@@ -108,14 +116,13 @@ const cardGroup = [
     {
         type: "Condo",
         price: "$12000",
-        img: "../assets/featured Pages/r-architecture-2gDwlIim3Uw-unsplash.jpg",
+        img: Image8,
         name: "Gorgeous Villa Bay View",
         location: "1421 San Pedro St, Los Angeles CA 900015",
         beds: "4",
         bath: "2",
         sqft: "6880",
-        profileImg:
-            "../assets/featured Pages/jason-moyer-A73ah5JKtVA-unsplash.jpg",
+        profileImg: profile3,
         profileName: "Ali Tufan",
         date: "1 year ago",
         mode: "rent",
@@ -123,14 +130,13 @@ const cardGroup = [
     {
         type: "Single Family Home",
         price: "$14000",
-        img: "../assets/featured Pages/kara-eads-L7EwHkq1B2s-unsplash.jpg",
+        img: Image9,
         name: "Renovated Apartment",
         location: "1421 San Pedro St, Los Angeles CA 900015",
         beds: "4",
         bath: "6",
         sqft: "12000",
-        profileImg:
-            "../assets/featured Pages/alexander-hipp-iEEBWgY_6lA-unsplash.jpg",
+        profileImg: profile1,
         profileName: "Ali Tufan",
         date: "1 year ago",
         mode: "rent",
@@ -138,14 +144,13 @@ const cardGroup = [
     {
         type: "Apartment",
         price: "$15000",
-        img: "../assets/featured Pages/greg-rivers-rChFUMwAe7E-unsplash.jpg",
+        img: Image10,
         name: "Luxury Family Home",
         location: "1421 San Pedro St, Los Angeles CA 900015",
         beds: "4",
         bath: "6",
         sqft: "5280",
-        profileImg:
-            "../assets/featured Pages/alexander-hipp-iEEBWgY_6lA-unsplash.jpg",
+        profileImg: profile1,
         profileName: "Ali Tufan",
         date: "1 year ago",
         mode: "rent",
@@ -153,14 +158,13 @@ const cardGroup = [
     {
         type: "Villa",
         price: "$19000",
-        img: "../assets/featured Pages/fomstock-4ojhpgKpS68-unsplash.jpg",
+        img: Image11,
         name: "Renovated Apartment",
         location: "1421 San Pedro St, Los Angeles CA 900015",
         beds: "4",
         bath: "1",
         sqft: "5280",
-        profileImg:
-            "../assets/featured Pages/ryan-hoffman-Ft4p5E9HjTQ-unsplash.jpg",
+        profileImg: profile2,
         profileName: "Ali Tufan",
         date: "1 year ago",
         mode: "rent",
@@ -168,14 +172,13 @@ const cardGroup = [
     {
         type: "Bungalow",
         price: "$13000",
-        img: "../assets/featured Pages/digital-marketing-agency-ntwrk-g39p1kDjvSY-unsplash.jpg",
+        img: Image12,
         name: "Luxury Family Home",
         location: "1421 San Pedro St, Los Angeles CA 900015",
         beds: "4",
         bath: "2",
         sqft: "5280",
-        profileImg:
-            "../assets/featured Pages/jason-moyer-A73ah5JKtVA-unsplash.jpg",
+        profileImg: profile3,
         profileName: "Ali Tufan",
         date: "1 year ago",
         mode: "rent",
