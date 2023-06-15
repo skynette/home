@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -9,35 +9,53 @@
 /* #EEF60C dark yellow */
 /* #5D57F9 dark blue */
 select {
-    /* for Firefox */
-    -moz-appearance: none;
-    /* for Chrome */
-    -webkit-appearance: none;
-  }
+	/* for Firefox */
+	-moz-appearance: none;
+	/* for Chrome */
+	-webkit-appearance: none;
+}
 
-#remember:checked{
-    background-color: #FA7170;
+#remember:checked {
+	background-color: #fa7170;
 }
-#remember:checked ~ .check-1{
-    opacity:100;
-    color: white;
+#remember:checked ~ .check-1 {
+	opacity: 100;
+	color: white;
 }
-#terms:checked{
-    background-color: #FA7170;
+#terms:checked {
+	background-color: #fa7170;
 }
-#terms:checked ~ .check-1{
-    opacity:100;
-    color: white;
+#terms:checked ~ .check-1 {
+	opacity: 100;
+	color: white;
 }
 
 .navbar-hero-container {
-    background-image: url('images/hero.jpeg');
-    background-size: cover;
-    background-position: center;
-  }
+	background-image: url("images/hero.jpeg");
+	background-size: cover;
+	background-position: center;
+}
 
 .carousel-1 {
-    background-image: url('assets/Cities/ben-o-bro-wpU4veNGnHg-unsplash.jpg');
+	background-image: url("assets/Cities/ben-o-bro-wpU4veNGnHg-unsplash.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+.carousel-2 {
+    background-image: url("assets/Cities/clement-falize-9uNFBOXBEBc-unsplash.jpg");
     background-size: cover;
     background-position: center;
-  }
+}
+
+.carousel-3 {
+    background-image: url("assets/Cities/ling-tang-XHLKlSppBvk-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-4 {
+    background-image: url("assets/Cities/pedro-lastra-Nyvq2juw4_o-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+}
