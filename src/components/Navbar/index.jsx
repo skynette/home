@@ -34,7 +34,7 @@ const Navbar = () => {
 						</ul>
 					</div>
 
-					<div className={`hidden md:${flexBetween} gap-2`}>
+					<div className={`hidden md:flex md:items-center gap-2`}>
 						<h1 className="text-white px-2 py-1 rounded-md border border-white mr-4 hover:cursor-pointer hover:bg-body-300 hover:text-body-600">
 							+ Add Listing
 						</h1>
