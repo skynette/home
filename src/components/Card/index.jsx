@@ -30,11 +30,11 @@ const Card = (props) => {
 					<h3 className="font-bold text-body-300 text-xl absolute bottom-2 left-6 z-1">
 						{price}/<span className="text-lg">mo</span>
 					</h3>
-					<div className="flex gap-2 text-sm absolute top-1 left-6">
-						<div className="bg-cblue-500 p-1 text-center text-body-300">
+					<div className="flex gap-2 text-sm absolute top-5 left-6">
+						<div className="bg-cblue-500 p-1 text-center rounded-sm text-body-300">
 							Featured
 						</div>
-						<div className="bg-cred-500 text-center p-1 text-body-300">
+						<div className="bg-cred-500 text-center rounded-sm p-1 text-body-300">
 							For {mode}
 						</div>
 					</div>
