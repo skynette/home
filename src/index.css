@@ -35,3 +35,9 @@ select {
     background-size: cover;
     background-position: center;
   }
+
+.carousel-1 {
+    background-image: url('assets/Cities/ben-o-bro-wpU4veNGnHg-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+  }
