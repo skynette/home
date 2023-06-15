@@ -35,7 +35,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div className=" mt-4 h-[40vh] overflow-hidden lg:col-span-2 lg:mt-0 rounded-lg relative">
-                            <div className="h-[100%] w-[100%] bg-[url('src/assets/Cities/clement-falize-9uNFBOXBEBc-unsplash.jpg')] bg-cover bg-center rounded-lg hover:transform hover:scale-105 hover:rotate-1 transition-transform ease-in-out duration-300">
+                            <div className="h-[100%] w-[100%] bg-[url('src/assets/Cities/clement-falize-9uNFBOXBEBc-unsplash.jpg')] bg-cover bg-center rounded-lg hover:transform hover:scale-110  transition-transform ease-in-out duration-500">
 
                             </div>
                             <div className="absolute bottom-8 text-center left-[38%]">
@@ -44,7 +44,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="mt-4 h-[40vh] overflow-hidden lg:col-span-2 lg:mt-0 rounded-lg relative">
-                            <div className="h-[100%] w-[100%] bg-[url('src/assets/Cities/ling-tang-XHLKlSppBvk-unsplash.jpg')] bg-cover bg-center rounded-lg hover:transform hover:scale-105 hover:rotate-1 transition-transform ease-in-out duration-300">
+                            <div className="h-[100%] w-[100%] bg-[url('src/assets/Cities/ling-tang-XHLKlSppBvk-unsplash.jpg')] bg-cover bg-center rounded-lg hover:transform hover:scale-110 transition-transform ease-in-out duration-500">
 
                             </div>
                             <div className="absolute bottom-8 text-center left-[38%]">
@@ -53,7 +53,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="mt-4 h-[60vh] lg:h-[40vh] overflow-hidden lg:col-span-1 lg:mt-0 rounded-lg relative">
-                            <div className="h-[100%] w-[100%] bg-[url('src/assets/Cities/pedro-lastra-Nyvq2juw4_o-unsplash.jpg')] bg-cover bg-center rounded-lg hover:transform hover:scale-105 hover:rotate-1 transition-transform ease-in-out duration-300">
+                            <div className="h-[100%] w-[100%] bg-[url('src/assets/Cities/pedro-lastra-Nyvq2juw4_o-unsplash.jpg')] bg-cover bg-center rounded-lg hover:transform hover:scale-110 transition-transform ease-in-out duration-500">
 
                             </div>
                             <div className="absolute bottom-8 text-center left-[38%]">
