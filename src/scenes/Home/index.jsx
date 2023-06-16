@@ -1,6 +1,9 @@
 import Navbar from "../../components/Navbar"
 import Hero from "../../components/Hero"
 import CarouselComponent from "../../components/Carousel"
+import { GiHighFive, GiHouse, GiCalculator } from 'react-icons/gi'
+
+
 
 const Home = () => {
     return (
@@ -15,11 +18,11 @@ const Home = () => {
                 <div>
                     <CarouselComponent/>
                 </div>
-
+            {/* Cities */}
             </div>
             <div className="bg-body-300">
                 <div className="text-center pt-12">
-                    <h2 className="text-body-800 font-bold text-3xl pt-12"> Find Properties in These Cities</h2>
+                    <h2 className="text-body-800 font-bold text-3xl pt-12">Find Properties in These Cities</h2>
                     <p className="text-body-500 mt-2">Handpicked properties by our team</p>
                 </div>
                 <div className="px-6 py-12 lg:px-40 lg:py-20">
@@ -65,6 +68,38 @@ const Home = () => {
                     </div>
                 </div>
 
+            </div>
+            {/* Choose Us */}
+            <div className="bg-body-400">
+                <div className="text-center pt-12">
+                    <h2 className="text-body-800 font-bold text-3xl pt-10">Why Choose Us</h2>
+                    <p className="text-body-500 mt-2">We provide full service at every step.</p>
+                </div>
+                <div className="md:mx-[20vh] mx-4 my-10 lg:flex lg:gap-6" >
+                    <div className="bg-body-300 text-center rounded-lg flex flex-col items-center mb-5 shadow-md city">
+                        <div className="my-11">
+                            <GiHighFive className="p-6 rounded-full bg-cred-200 h-[130px] w-[130px] text-cred-500 cicon"/>
+                        </div>
+                        <h2 className="text-body-800 font-bold text-lg mb-3">Trusted By Thousands</h2>
+                        <p className="text-body-800 text-sm px-10 mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta cupiditate libero doloribus</p>
+                    </div>
+                    <div className="bg-body-300 text-center rounded-lg flex flex-col items-center mb-5 shadow-md city">
+                        <div className="my-11">
+                            <GiHouse className="p-6 rounded-full bg-cred-200 h-[130px] w-[130px] text-cred-500 cicon"/>
+                        </div>
+                        <h2 className="text-body-800 font-bold text-lg mb-3">Wide Range Of Properties</h2>
+                        <p className="text-body-800 text-sm px-10 mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta cupiditate libero doloribus</p>
+                    </div>
+                    <div className="bg-body-300 text-center rounded-lg flex flex-col items-center mb-5 shadow-md city">
+                        <div className="my-11">   
+                             <GiCalculator className="p-6 rounded-full bg-cred-200 h-[130px] w-[130px] text-cred-500 cicon"/> 
+                        </div>
+                        <h2 className="text-body-800 font-bold text-lg mb-3">Financing Made Easy</h2>
+                        <p className="text-body-800 text-sm px-10 mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta cupiditate libero doloribus</p>
+                    </div>
+                    
+
+                </div>
             </div>
 
             <h1>Home</h1>

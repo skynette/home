@@ -59,3 +59,13 @@ select {
     background-size: cover;
     background-position: center;
 }
+
+.city:hover {
+	@apply shadow-lg;
+}
+.cicon:hover {
+	@apply bg-cred-500 text-body-300;
+}
+.city:hover .cicon {
+	@apply bg-cred-500 text-body-300;
+} 

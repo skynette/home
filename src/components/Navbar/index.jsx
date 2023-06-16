@@ -24,7 +24,7 @@ const Navbar = () => {
 					</div>
 
 					{/* right side */}
-					<div className={`hidden md:block ${flexBetween}`}>
+					<div className={`hidden md:block ${flexBetween} md:transform md:translate-x-10`}>
 						<ul className={`${flexBetween} gap-4`}>
 							<li className="text-white">About</li>
 							<li className="text-white">Contact</li>
@@ -51,9 +51,8 @@ const Navbar = () => {
 					</div>
 
 					<div
-						className={`fixed top-0 left-0 z-[20] w-3/4 h-[100vh] bg-white transform transition-transform duration-300 ${
-							isNavOpen ? "translate-x-0" : "-translate-x-full"
-						} nav-menu`}
+						className={`fixed top-0 left-0 z-[20] w-3/4 h-[100vh] bg-white transform transition-transform duration-300 ${isNavOpen ? "translate-x-0" : "-translate-x-full"
+							} nav-menu`}
 					>
 						{/* Navigation menu content */}
 						<div className="flex justify-between items-center h-16 px-4 border-b">
@@ -63,15 +62,15 @@ const Navbar = () => {
 								onClick={() => setIsNavOpen(!isNavOpen)}
 							/>
 						</div>
-            <div className="bg-body-300 hover:cursor-pointer">
-              <ul className="flex flex-col justify-center items-start gap-4">
-                <li className="text-body-800 py-2 px-4 border-b w-full">About</li>
-                <li className="text-body-800 py-2 px-4 border-b w-full">Contact</li>
-                <li className="text-body-800 py-2 px-4 border-b w-full" onClick={loginNav}>
-                  Login
-                </li>
-              </ul>
-            </div>
+						<div className="bg-body-300 hover:cursor-pointer">
+							<ul className="flex flex-col justify-center items-start gap-4">
+								<li className="text-body-800 py-2 px-4 border-b w-full">About</li>
+								<li className="text-body-800 py-2 px-4 border-b w-full">Contact</li>
+								<li className="text-body-800 py-2 px-4 border-b w-full" onClick={loginNav}>
+									Login
+								</li>
+							</ul>
+						</div>
 					</div>
 				</nav>
 			</div>
