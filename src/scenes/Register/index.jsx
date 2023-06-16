@@ -12,7 +12,7 @@ const Register = () => {
         navigate("/login")
     }
     return (
-        <div className='bg-body-400 h-screen flex flex-col justify-center items-center font-main p-6 md:p-10'>
+        <div className='bg-body-400 h-auto flex flex-col justify-center items-center font-main p-6 md:p-10'>
 
             {/* background */}
             <div className='bg-body-300 w-full h-full shadow-md rounded-lg sm:w-[65vw] sm:h-auto lg:w-[60vw]'>
@@ -43,7 +43,7 @@ const Register = () => {
                         <form action="/">
                             <div className='relative'>
                                 <HiUser className={iconClasses} />
-                                <input name="name" type='text' placeholder=' User Name' className='block my-5 w-full py-3 px-2 rounded-lg outline-none border border-body-400 text-sm' required />
+                                <input name="name" type='text' placeholder=' User Name' className='block my-3 w-full py-3 px-2 rounded-lg outline-none border border-body-400 text-sm' required />
                             </div>
 
                             <div className='relative'>
@@ -53,12 +53,12 @@ const Register = () => {
 
                             <div className='relative'>
                                 <HiLockClosed className={iconClasses} />
-                                <input name="password" type='password' placeholder='Password' className='block my-5 w-full py-3 px-2 rounded-lg outline-none border border-body-400 text-sm' required />
+                                <input name="password" type='password' placeholder='Password' className='block my-3 w-full py-3 px-2 rounded-lg outline-none border border-body-400 text-sm' required />
                             </div>
 
                             <div className='relative'>
                                 <HiLockClosed className={iconClasses} />
-                                <input name="password" type='password' placeholder='Re Enter Password' className='block my-5 w-full py-3 px-2 rounded-lg outline-none border border-body-400 text-sm' required />
+                                <input name="password" type='password' placeholder='Re Enter Password' className='block my-3 w-full py-3 px-2 rounded-lg outline-none border border-body-400 text-sm' required />
                             </div>
 
                             <div className="relative">

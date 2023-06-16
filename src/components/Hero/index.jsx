@@ -32,7 +32,7 @@ const Hero = () => {
 
       {/* search and filter inputs */}
       <div className="flex flex-col md:flex-row gap-1 items-center bg-body-300 p-1 rounded-md text-body-600 w-5/6 md:w-[50%] md:h-16 my-4">
-        <input type="text" name="title" placeholder="Title" className="w-full md:w-1/4 px-4 py-2 outline-none" />
+        <input type="text" name="title" placeholder="Title" className="w-full md:w-1/4 px-4 py-2 outline-none border border-gray-300 rounded-md" />
         <div className="relative w-full md:w-1/4">
           <select name="category" className="border border-gray-300 rounded-md w-full py-2 px-4 outline-none">
             <option value="">All Categories</option>
