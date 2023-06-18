@@ -38,7 +38,7 @@ const Navbar = () => {
 						<h1 className="text-white px-2 py-1 rounded-md border border-white mr-4 hover:cursor-pointer hover:bg-body-300 hover:text-body-600">
 							+ Add Listing
 						</h1>
-						<FaUserCircle className="text-cblue-500 h-7 w-7" />
+						<FaUserCircle className="text-cblue-600 h-7 w-7" />
 					</div>
 
 					<div className="hover:cursor-pointer md:hidden">
