@@ -191,7 +191,7 @@ const Home = () => {
                 <div className="sm:max-w-sm">
                     <h2 className="text-body-300 font-bold text-lg">Subscribe</h2>
                     <div className="mt-6 flex items-center">
-                        <input className="bg-cblue-1000 p-3 rounded-full" type="email" placeholder="Your email" />
+                        <input className="bg-cblue-1000 p-3 rounded-full text-body-400" type="email" placeholder="Your email" />
                         <button className="m-2 p-3 bg-cblue-1000 rounded-full text-body-500 hover:bg-cred-500"><AiFillCaretRight/></button>
                     </div>
                 </div>
