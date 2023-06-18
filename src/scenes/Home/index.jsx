@@ -3,6 +3,7 @@ import Hero from "../../components/Hero"
 import CarouselComponent from "../../components/Carousel"
 import { GiHighFive, GiHouse, GiCalculator } from 'react-icons/gi'
 import { AiOutlineTwitter, AiOutlineInstagram, AiOutlineFacebook, AiFillCaretRight } from 'react-icons/ai'
+import { Link } from "react-router-dom"
 import Partner1 from "../../assets/partners/1.png"
 import Partner2 from "../../assets/partners/2.png"
 import Partner3 from "../../assets/partners/3.png"
@@ -142,28 +143,28 @@ const Home = () => {
                 <div className="sm:max-w-sm flex flex-col">
                     <h2 className="text-body-300 font-bold text-lg">Quick Links</h2>
                     <ul className="list-none">
-                        <li className="mt-6 transform hover:translate-x-2">
-                            <a className="text-body-500 text-sm font-light hover:text-body-400" href="/">About Us</a>
-                        </li>
-                        <li className="mt-4 transform hover:translate-x-2">
-                            <a className="text-body-500 text-sm font-light hover:text-body-400" href="/">Terms & Conditions</a>
-                        </li>
-                        <li className="mt-4 transform hover:translate-x-2">
-                            <a className="text-body-500 text-sm font-light hover:text-body-400" href="/">User's Guide</a>
-                        </li>
-                        <li className="mt-4 transform hover:translate-x-2">
-                            <a className="text-body-500 text-sm font-light hover:text-body-400" href="/">Support Center</a>
-                        </li>
-                        <li className="mt-4 transform hover:translate-x-2">
-                            <a className="text-body-500 text-sm font-light hover:text-body-400" href="/">Press Info</a>
-                        </li>
+                        <Link to="/">
+                            <li className="mt-6 transform hover:translate-x-2 text-body-500 text-sm font-light hover:text-body-400">About Us</li>
+                        </Link>
+                        <Link to="/">
+                            <li className="mt-4 transform hover:translate-x-2 text-body-500 text-sm font-light hover:text-body-400">Terms & Conditions</li>
+                        </Link>
+                        <Link to="/">
+                            <li className="mt-4 transform hover:translate-x-2 text-body-500 text-sm font-light hover:text-body-400">User's Guide</li>
+                        </Link>
+                        <Link to="/">
+                            <li className="mt-4 transform hover:translate-x-2 text-body-500 text-sm font-light hover:text-body-400">Support Center</li>
+                        </Link>
+                        <Link to="/">
+                            <li className="mt-4 transform hover:translate-x-2 text-body-500 text-sm font-light hover:text-body-400">Press Info</li>
+                        </Link>
                     </ul>
                 </div>
                 <div className="sm:max-w-sm">
                     <h2 className="text-body-300 font-bold text-lg">Contact Us</h2>
                     <ul className="list-none">
                         <li className="mt-6 transform hover:translate-x-2">
-                            <a className="text-body-500 text-sm font-light hover:text-body-400" href="poludiran@gmail.com">info@home.com</a>
+                            <a className="text-body-500 text-sm font-light hover:text-body-400" href="mailto:poludiran@gmail.com">info@home.com</a>
                         </li>
                         <li className="mt-4 hover:translate-x-2 transform">
                             <a className="text-body-500 text-sm font-light hover:text-body-400" href="/">Collins Street West, Victoria</a>
@@ -197,8 +198,8 @@ const Home = () => {
                 </div>
             </div>
 
-            <footer>
-
+            <footer className="bg-cblue-1000">
+                <p className="text-sm text-body-500 py-10 text-center">&copy; 2023 Your Company Name. All rights reserved.</p>
             </footer>
         </div>
     )

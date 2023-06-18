@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { HiUser, HiLockClosed } from "react-icons/hi";
 import { FaFacebookF, FaGoogle } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     let navigate = useNavigate();
@@ -54,7 +55,9 @@ const Login = () => {
                                     <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clipRule="evenodd" />
                                 </svg>
                                     <span className='text-sm ml-2'> Remember me</span></label>
-                                <a href='/' className="text-cblue-500 text-sm">Lost Your Password?</a>
+                                <Link to="/">
+                                    <p className="text-cblue-500 text-sm">Lost Your Password?</p>
+                                </Link>
                             </div>
 
                             <div className='flex justify-center'>
