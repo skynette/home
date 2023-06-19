@@ -59,7 +59,7 @@ const Card = (props) => {
 					<p className="text-sm text-body-800">SqFt: {sqft}</p>
 				</div>
 				<hr className="text-body-800 my-6" />
-				<div className="h-[15%] w-full px-2 flex justify-between items-center mt-[-14px] md:my-[-14px] lg:my-[-15px] xl:my-0">
+				<div className="h-[15%] w-full px-2 flex justify-between items-center mt-[-16px] md:my-[-14px] lg:my-[-15px] xl:my-0">
 					<div className="flex items-center gap-4">
 						<img
 							className="h-[50px] w-[50px] object-cover object-top rounded-full"
