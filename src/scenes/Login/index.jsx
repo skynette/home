@@ -65,7 +65,7 @@ const Login = () => {
                             </div>
                         </form>
                         <div className='flex justify-center'>
-                            <p className='text-sm'>Dont have an account? <a href='/register' className='text-cred-500'>Register</a></p>
+                            <p className='text-sm'>Dont have an account? <Link to="/register"><span className='text-cred-500'>Register</span></Link></p>
                         </div>
                     </div>
                 </div>

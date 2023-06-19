@@ -3,6 +3,7 @@ import { HiLockClosed, HiUser } from 'react-icons/hi';
 import { useNavigate } from 'react-router-dom';
 import { MdEmail } from 'react-icons/md';
 import { AiOutlineCaretDown } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
     const iconClasses = "absolute top-3 left-[90%] sm:left-[85%] lg:left-[90%] h-6 w-6 text-body-500"
@@ -81,7 +82,7 @@ const Register = () => {
                             </div>
                         </form>
                         <div className='flex justify-center pb-2'>
-                            <p className='text-sm'>Already have an account? <a href='/login' className='text-cred-500'>Log in</a></p>
+                            <p className='text-sm'>Already have an account? <Link to="/login"><span className='text-cred-500'>Log in</span></Link></p>
                         </div>
                     </div>
                 </div>
