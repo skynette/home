@@ -31,12 +31,12 @@ const CarouselComponent = () => {
 	}, []);
 
 	const settings = {
-		dots: true,
-		arrows: false,
+		dots: (slides === 1)? false: true,
+		arrows: (slides === 1)? true: false,
 		infinite: true,
 		speed: 500,
 		slidesToShow: slides,
-		slidesToScroll: slides,
+		slidesToScroll: slides
 	};
 
 	return (
