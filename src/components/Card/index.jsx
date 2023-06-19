@@ -58,7 +58,7 @@ const Card = (props) => {
 					<p className="text-sm text-body-800">Baths: {baths}</p>
 					<p className="text-sm text-body-800">SqFt: {sqft}</p>
 				</div>
-				<hr className="text-body-800 my-4 xl:my-6" />
+				<hr className="text-body-800 my-3 sm:my-4 xl:my-6" />
 				<div className="h-[15%] w-full px-2 flex justify-between items-center">
 					<div className="flex items-center gap-4">
 						<img
