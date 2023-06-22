@@ -5,10 +5,8 @@ import { MdClose } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
 
-const Navbar = ( props ) => {
-	const { color } = props;
+const Navbar2 = ( ) => {
 	
-
 	const flexBetween = "flex justify-between items-center";
 	const navigate = useNavigate();
 	const loginNav = () => {
@@ -23,7 +21,7 @@ const Navbar = ( props ) => {
 				<nav className={`h-16 ${flexBetween}`}>
 					{/* left side */}
 					<div>
-						<h1 className={`text-2xl text-${color} hover:cursor-pointer`}>
+						<h1 className={`text-2xl text-body-800 hover:cursor-pointer`}>
 							Home
 						</h1>
 					</div>
@@ -31,16 +29,16 @@ const Navbar = ( props ) => {
 					{/* right side */}
 					<div className={`hidden md:block ${flexBetween} md:transform md:translate-x-10`}>
 						<ul className={`${flexBetween} gap-4`}>
-							<li className={`text-${color}`}>About</li>
-							<li className={`text-${color}`}>Contact</li>
-							<li className={`text-${color}`} onClick={loginNav}>
+							<li className={`text-body-800`}>About</li>
+							<li className={`text-body-800`}>Contact</li>
+							<li className={`text-body-800`} onClick={loginNav}>
 								Login
 							</li>
 						</ul>
 					</div>
 
 					<div className={`hidden md:flex md:items-center gap-2`}>
-						<h1 className={`text-${color} px-2 py-1 rounded-md border border-${color} mr-4 hover:cursor-pointer hover:bg-${color} hover:text-body-600`}>
+						<h1 className={`text-body-800 px-2 py-1 rounded-md border border-body-800 mr-4 hover:cursor-pointer hover:bg-body-800 hover:text-body-300`}>
 							+ Add Listing
 						</h1>
 						<FaUserCircle className="text-cblue-600 h-7 w-7" />
@@ -49,7 +47,7 @@ const Navbar = ( props ) => {
 					<div className="hover:cursor-pointer md:hidden">
 						{!isNavOpen && (
 							<AiOutlineMenu
-								className={`text-${color} h-7 w-7`}
+								className={`text-body-800 h-7 w-7`}
 								onClick={() => setIsNavOpen(!isNavOpen)}
 							/>
 						)}
@@ -83,4 +81,4 @@ const Navbar = ( props ) => {
 	);
 };
 
-export default Navbar;
+export default Navbar2;

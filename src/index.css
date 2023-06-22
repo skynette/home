@@ -69,3 +69,20 @@ select {
 .city:hover .cicon {
 	@apply bg-cred-500 text-body-300;
 } 
+
+.rc-slider-track {
+	background-color: #FA7170; /* Change to your desired color */
+  }
+  
+  .rc-slider-handle {
+	border-color: #FA7170;
+	background-color: #FA7170; /* Change to your desired color */
+  }
+  .rc-slider-handle:focus {
+	
+	border-color: #FA7170;
+	/* Change to your desired focus box shadow */
+  }
+  .rc-slider-handle:hover {
+	border-color: #FA7170; /* Change to your desired hover color */
+  }
