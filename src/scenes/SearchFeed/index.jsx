@@ -24,6 +24,7 @@ const SearchFeed = () => {
   const [filtersOpen, setFiltersOpen] = useState(false);
 
   const popUp = useRef(null);
+  const popUp2 = useRef(null);
 
   const v3Items = cardGroup.slice(0, 3);
 
@@ -50,7 +51,7 @@ const SearchFeed = () => {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (popUp.current && !popUp.current.contains(event.target)) {
+      if (popUp.current && !popUp.current.contains(event.target) && popUp2.current && !popUp2.current.contains(event.target)) {
         setPriceOpen(false);
       }
     }
@@ -272,7 +273,7 @@ const SearchFeed = () => {
               </select>
               <AiOutlineCaretDown className='absolute right-4 top-[40%] text-body-600' />
             </div>
-            <div ref={popUp} className='relative'>
+            <div ref={popUp2}className='relative'>
               <div onClick={handlePopUp} className='h-12 border border-body-600 rounded-md pl-4 text-sm flex items-center bg-white text-body-500'>Price Range</div>
               <div className={`px-20 py-10 shadow-lg z-10 absolute top-9 bg-body-300 rounded-md  border border-body-600 ${(!priceOpen) ? 'hidden' : 'block'}`}>
                 <div className='flex justify-between mb-5'>
