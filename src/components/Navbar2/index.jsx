@@ -67,9 +67,9 @@ const Navbar2 = ( ) => {
 						</div>
 						<div className="bg-body-300 hover:cursor-pointer">
 							<ul className="flex flex-col justify-center items-start gap-4">
-								<li className="text-body-300 py-2 px-4 border-b w-full">About</li>
-								<li className="text-body-300 py-2 px-4 border-b w-full">Contact</li>
-								<li className="text-body-300 py-2 px-4 border-b w-full" onClick={loginNav}>
+								<li className="text-body-800 py-2 px-4 border-b w-full">About</li>
+								<li className="text-body-800 py-2 px-4 border-b w-full">Contact</li>
+								<li className="text-body-800 py-2 px-4 border-b w-full" onClick={loginNav}>
 									Login
 								</li>
 							</ul>
