@@ -187,7 +187,7 @@ const SearchFeed = () => {
               <CarouselV2 />
             </div>
           </div>
-          <div className='bg-body-300 py-6 rounded-lg'>
+          <div className='bg-body-300 py-6 rounded-lg mb-20'>
             <h3 className='text-lg text-body-800 pb-4 pl-6 font-bold'>Recently Viewed</h3>
             <div className='flex flex-col gap-4 items-center'>
               <CardV3
