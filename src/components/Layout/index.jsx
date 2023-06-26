@@ -1,0 +1,53 @@
+import React from 'react'
+import { ImStack } from 'react-icons/im'
+import { AiOutlinePlus, AiOutlineMail, AiOutlineMessage, AiOutlineHeart, AiOutlineUser, AiOutlinePoweroff } from 'react-icons/ai'
+import { BsHouses } from 'react-icons/bs'
+import { Outlet } from 'react-router-dom'
+
+const Layout = () => {
+  return (
+    <div className='bg-body-300 flex'>
+      <div>
+        <div
+          className={`fixed top-0 left-0 z-[20] hidden md:block md:w-1/4 xl:w-1/5 sm:w-3/4 h-[100vh] bg-cblue-900
+             `}
+        >
+          {/* Navigation menu content */}
+          <div className="flex justify-between items-center h-20 px-4 border-b">
+            <h1 className="text-2xl text-cred-500">Home</h1>
+          </div>
+          <div className="bg-cblue-900 hover:cursor-pointer">
+            <div>
+              <h3 className='text-body-500 my-6 ml-4 text-lg'>Main</h3>
+              <ul>
+                <li className='text-body-400 py-3 pl-4 font-thin hover:border-l-2 hover:border-cred-500 hover:bg-cblue-1000 hover:text-body-300 flex gap-2 items-center'><ImStack/> Dashboard</li>
+                <li className='text-body-400 py-3 pl-4 font-thin hover:border-l-2 hover:border-cred-500 hover:bg-cblue-1000 hover:text-body-300 flex gap-2 items-center'><AiOutlinePlus/> Create Listing</li>
+                <li className='text-body-400 py-3 pl-4 font-thin hover:border-l-2 hover:border-cred-500 hover:bg-cblue-1000 hover:text-body-300 flex gap-2 items-center'><AiOutlineMail/> Message</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className='text-body-500 my-6 ml-4 text-lg'>Manage Listings</h3>
+              <ul>
+                <li className='text-body-400 py-3 pl-4 font-thin hover:border-l-2 hover:border-cred-500 hover:bg-cblue-1000 hover:text-body-300 flex gap-2 items-center'><BsHouses/> My Properties</li>
+                <li className='text-body-400 py-3 pl-4 font-thin hover:border-l-2 hover:border-cred-500 hover:bg-cblue-1000 hover:text-body-300 flex gap-2 items-center'><AiOutlineMessage/> Reviews</li>
+                <li className='text-body-400 py-3 pl-4 font-thin hover:border-l-2 hover:border-cred-500 hover:bg-cblue-1000 hover:text-body-300 flex gap-2 items-center'><AiOutlineHeart/> My Favourites</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className='text-body-500 my-6 ml-4 text-lg'>Manage Account</h3>
+              <ul>
+                <li className='text-body-400 py-3 pl-4 font-thin hover:border-l-2 hover:border-cred-500 hover:bg-cblue-1000 hover:text-body-300 flex gap-2 items-center'><AiOutlineUser/> My Profile</li>
+                <li className='text-body-400 py-3 pl-4 font-thin hover:border-l-2 hover:border-cred-500 hover:bg-cblue-1000 hover:text-body-300 flex gap-2 items-center'><AiOutlinePoweroff/> Logout</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='h-screen w-full bg-body-400 md:ml-[25%] xl:ml-[20%]'>
+        <Outlet/>
+      </div>
+    </div>
+  )
+}
+
+export default Layout

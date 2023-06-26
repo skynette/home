@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 
 const Navbar = ( props ) => {
-	const { color } = props;
+	const { color, bg } = props;
 	
 
 	const flexBetween = "flex justify-between items-center";
@@ -18,7 +18,7 @@ const Navbar = ( props ) => {
 
 
 	return (
-		<div className="border-b border-body-500 relative">
+		<div className={`border-b border-body-500 relative bg-${bg}`}>
 			<div className="w-5/6 mx-auto">
 				<nav className={`h-16 ${flexBetween}`}>
 					{/* left side */}
@@ -40,7 +40,7 @@ const Navbar = ( props ) => {
 					</div>
 
 					<div className={`hidden md:flex md:items-center gap-2`}>
-						<h1 className={`text-${color} px-2 py-1 rounded-md border border-${color} mr-4 hover:cursor-pointer hover:bg-${color} hover:text-body-600`}>
+						<h1 className={`text-${color} px-2 py-1 rounded-md border border-${color} mr-4 hover:cursor-pointer hover:bg-${color} hover:text-body-600 font-semibold`}>
 							+ Add Listing
 						</h1>
 						<FaUserCircle className="text-cblue-600 h-7 w-7" />

@@ -8,7 +8,7 @@ import Upload from './scenes/Upload';
 import HouseDetail from './scenes/HouseDetail';
 import ProfileDetail from './scenes/ProfileDetail';
 import EditProfile from './scenes/EditProfile';
-
+import Layout from './components/Layout';
 
 const App = () => {
   return (
@@ -18,7 +18,9 @@ const App = () => {
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>
         <Route path="/search/:searchTerm" element={<SearchFeed/>}/>
-        <Route path="/user/:id" element={<Profile/>}/>
+        <Route element={<Layout/>}>
+          <Route path="/user/:id" element={<Profile/>}/>
+        </Route>
         <Route path="/user/:id/upload" element={<Upload/>}/>
         <Route path="/house/:id" element={<HouseDetail/>}/>
         <Route path="/profile/:id" element={<ProfileDetail/>}/>

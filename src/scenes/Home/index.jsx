@@ -15,7 +15,7 @@ const Home = () => {
     return (
         <div className="bg-body-400 font-main" >
             <div className="navbar-hero-container">
-                <Navbar color="body-300"/>
+                <Navbar color="body-300" bg="transparent"/>
                 <Hero />
             </div>
             <div className="h-[100vh] w-screen flex flex-col items-center justify-center">

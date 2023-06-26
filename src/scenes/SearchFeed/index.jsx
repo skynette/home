@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect, useRef } from 'react'
 import { useParams } from 'react-router-dom'
-import Navbar2 from '../../components/Navbar2'
+import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import { BiFilter } from 'react-icons/bi'
 import Pagination from '../../components/Pagination'
@@ -78,7 +78,7 @@ const SearchFeed = () => {
 
   return (
     <div className='bg-body-400 font-main'>
-      <Navbar2 />
+      <Navbar color="body-300" bg="cblue-800"/>
       <div className='pt-10 mx-8 lg:mx-32 flex justify-between items-center pb-10'>
         <h1 className='text-3xl text-body-800'>{searchTerm}-Properties</h1>
         <div onClick={() => setFiltersOpen(!filtersOpen)} className='flex items-center rounded-md overflow-hidden lg:hidden cursor-pointer'>
@@ -112,7 +112,7 @@ const SearchFeed = () => {
             </div>
             <div ref={popUp} className='relative'>
               <div onClick={handlePopUp} className='h-12 border border-body-600 rounded-md pl-4 text-sm flex items-center bg-white text-body-500'>Price Range</div>
-              <div className={`px-20 py-10 shadow-lg z-10 absolute top-9 bg-body-300 rounded-md  border border-body-600 ${(!priceOpen) ? 'hidden' : 'block'}`}>
+              <div className={`px-10 py-10 shadow-lg z-10 absolute top-9 bg-body-300 rounded-md  border border-body-600 ${(!priceOpen) ? 'hidden' : 'block'}`}>
                 <div className='flex justify-between mb-5'>
                   <h3 className='text-body-800'>${priceVal[0]}</h3>
                   <h3 className='text-body-800'>${priceVal[1]}</h3>
@@ -123,7 +123,7 @@ const SearchFeed = () => {
                   value={priceVal}
                   onChange={handleRangeChange}
                   defaultValue={[10000, 20000]}
-                  className='w-44'
+                  className='w-48'
                 />
               </div>
               <AiOutlineCaretDown className='absolute right-4 top-[40%] text-body-600' />
@@ -275,7 +275,7 @@ const SearchFeed = () => {
             </div>
             <div ref={popUp2}className='relative'>
               <div onClick={handlePopUp} className='h-12 border border-body-600 rounded-md pl-4 text-sm flex items-center bg-white text-body-500'>Price Range</div>
-              <div className={`px-20 py-10 shadow-lg z-10 absolute top-9 bg-body-300 rounded-md  border border-body-600 ${(!priceOpen) ? 'hidden' : 'block'}`}>
+              <div className={`px-10 py-10 shadow-lg z-10 absolute top-9 bg-body-300 rounded-md  border border-body-600 ${(!priceOpen) ? 'hidden' : 'block'}`}>
                 <div className='flex justify-between mb-5'>
                   <h3 className='text-body-800'>${priceVal[0]}</h3>
                   <h3 className='text-body-800'>${priceVal[1]}</h3>
@@ -286,7 +286,7 @@ const SearchFeed = () => {
                   value={priceVal}
                   onChange={handleRangeChange}
                   defaultValue={[10000, 20000]}
-                  className='w-44'
+                  className='w-48'
                 />
               </div>
               <AiOutlineCaretDown className='absolute right-4 top-[40%] text-body-600' />
