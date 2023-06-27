@@ -40,18 +40,7 @@ app.use(cookieParser());
 // app.use('/', express.static(join(__dirname, '/public')));
 
 // routes
-// app.use('/', require('./routes/root'));
-// app.use('/register', require('./routes/register'));
-// app.use('/login', require('./routes/auth'));
-// app.use('/refresh', require('./routes/refresh'));
-// app.use('/logout', require('./routes/logout'));
-
-// protected routes
-// app.use(verifyJWT)
-// app.use('/users', require('./routes/api/users'));
-// app.use('/employees', require('./routes/api/employees'));
-
-app.use(userRoute);
+app.use('/users', userRoute);
 
 app.all('*', (req, res) => {
     res.status(404);
