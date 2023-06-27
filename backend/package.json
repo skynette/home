@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "",
 	"main": "server.js",
-  "type": "module",
+	"type": "module",
 	"scripts": {
 		"start": "node server",
 		"dev": "nodemon server"
@@ -16,7 +16,7 @@
 		"cookie-parser": "^1.4.6",
 		"cors": "^2.8.5",
 		"date-fns": "^2.23.0",
-		"dotenv": "^16.0.3",
+		"dotenv": "^16.3.1",
 		"express": "^4.17.1",
 		"jsonwebtoken": "^9.0.0",
 		"mongoose": "^7.0.4",

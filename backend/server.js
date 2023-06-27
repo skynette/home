@@ -1,15 +1,15 @@
-import { dotenv } from 'dotenv';
+import dotenv  from 'dotenv';
 dotenv.config();
 import express, { urlencoded, json } from 'express';
 import cors from 'cors';
-import corsOptions from './config/corsOptions';
 // import { logger } from './middleware/logEvents';
 // import errorHandler from './middleware/errorHandler';
 // import { verifyJWT } from './middleware/verifyJWT';
 import cookieParser from 'cookie-parser';
-import credentials from './middleware/credentials';
-import { connection } from 'mongoose';
-import connectDB from './config/dbConn';
+import credentials from './middleware/credentials.js';
+import mongoose from 'mongoose';
+import connectDB from './config/dbConn.js';
+import {corsOptions} from './config/corsOptions.js';
 
 const PORT = 3500;
 const app = express();
@@ -60,7 +60,7 @@ app.all('*', (req, res) => {
 });
 
 // app.use(errorHandler);
-connection.once('open', () => {
+mongoose.connection.once('open', () => {
     console.log('[+] Connected to database');
     app.listen(PORT, () => console.log(`[+] Server running on port ${PORT}`));
 })

@@ -4,7 +4,8 @@ dotenv.config();
 
 const connectDB  = async () => {
 	try {
-		await mongoose.connect("process.env.DATABASE_URI", {
+		// eslint-disable-next-line no-undef
+		await mongoose.connect(process.env.DATABASE_URI, {
 			useUnifiedTopology: true,
 			useNewUrlParser: true,
 		});
