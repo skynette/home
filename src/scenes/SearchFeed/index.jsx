@@ -78,7 +78,7 @@ const SearchFeed = () => {
 
   return (
     <div className='bg-body-400 font-main'>
-      <Navbar color="body-300" bg="cblue-800"/>
+      <Navbar color="body-300" bg="cblue-900"/>
       <div className='pt-10 mx-8 lg:mx-32 flex justify-between items-center pb-10'>
         <h1 className='text-3xl text-body-800'>{searchTerm}-Properties</h1>
         <div onClick={() => setFiltersOpen(!filtersOpen)} className='flex items-center rounded-md overflow-hidden lg:hidden cursor-pointer'>
