@@ -17,7 +17,9 @@ export default {
         },
         cyellow:{
           500:'#F6FA70',
-          600:'#EEF60C'
+          600:'#EEF60C',
+          700:'#FFFF00',
+          800:'#FFB703'
         },
         cblue:{
           500:'#7570FA',

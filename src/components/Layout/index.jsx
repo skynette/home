@@ -50,10 +50,10 @@ const Layout = () => {
       </div>
       <div className='flex flex-col w-full'>
         <Navbar color="body-800" bg="body-400"/>
-        <div className='w-full flex justify-center'>
+        <div className='w-full md:w-[75%] xl:w-[80%] flex justify-center'>
             <div onClick={() => setDashOpen(!dashOpen)} className='md:hidden p-4 bg-body-300 my-8 flex gap-4 w-[80%] items-center justify-start rounded-md hover:cursor-pointer'><AiOutlineMenu/>Dashboard Navigation</div>
         </div>
-        <div className='w-full bg-body-400 md:ml-[25%] xl:ml-[20%]'>
+        <div className='w-full md:w-[75%] xl:w-[80%] bg-body-400 md:ml-[25%] xl:ml-[20%]'>
                 <Outlet/>
         </div>
       </div>
