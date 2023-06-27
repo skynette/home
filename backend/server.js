@@ -10,6 +10,7 @@ import credentials from './middleware/credentials.js';
 import mongoose from 'mongoose';
 import connectDB from './config/dbConn.js';
 import {corsOptions} from './config/corsOptions.js';
+import userRoute from './routes/userRoute.js';
 
 const PORT = 3500;
 const app = express();
@@ -50,6 +51,8 @@ app.use(cookieParser());
 // app.use('/users', require('./routes/api/users'));
 // app.use('/employees', require('./routes/api/employees'));
 
+app.use(userRoute);
+
 app.all('*', (req, res) => {
     res.status(404);
     if (req.accepts('json')) {
@@ -58,6 +61,8 @@ app.all('*', (req, res) => {
         res.type('txt').send("404 Not Found");
     }
 });
+
+
 
 // app.use(errorHandler);
 mongoose.connection.once('open', () => {
