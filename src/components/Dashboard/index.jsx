@@ -1,7 +1,7 @@
 import React from 'react'
 import DashCard from './DashCard'
 import { BsHouses } from 'react-icons/bs'
-import { AiOutlineEye, AiOutlineMessage, AiOutlineHeart } from 'react-icons/ai'
+import { AiOutlineEye, AiOutlineMessage, AiOutlineHeart, AiOutlineHome } from 'react-icons/ai'
 
 const Dashboard = () => {
 
@@ -9,7 +9,7 @@ const Dashboard = () => {
         {
             number: 37,
             text: 'All Properties',
-            icon: <BsHouses className='h-16 w-16 text-black bg-opacity-10 bg-black p-3 rounded-full'/>,
+            icon: <AiOutlineHome className='h-16 w-16 text-black bg-opacity-10 bg-black p-3 rounded-full'/>,
             color: 'black' 
         },
         {

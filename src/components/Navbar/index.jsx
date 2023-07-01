@@ -5,9 +5,9 @@ import { MdClose } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
 
-const Navbar = ( props ) => {
+const Navbar = (props) => {
 	const { color, bg } = props;
-	
+
 
 	const flexBetween = "flex justify-between items-center";
 	const navigate = useNavigate();
@@ -40,9 +40,11 @@ const Navbar = ( props ) => {
 					</div>
 
 					<div className={`hidden md:flex md:items-center gap-2`}>
-						<h1 className={`text-${color} px-2 py-1 rounded-md border border-${color} mr-4 hover:cursor-pointer hover:bg-${color} hover:text-body-600 font-semibold`}>
+
+						<h1 className={`text-${color} px-2 py-1 rounded-md  mr-4 hover:cursor-pointer border border-${color} hover:bg-${color} hover:text-body-600 font-semibold`}>
 							+ Add Listing
 						</h1>
+						
 						<FaUserCircle className="text-cblue-600 h-7 w-7" />
 					</div>
 
