@@ -9,10 +9,12 @@ import Navbar from '../Navbar'
 
 const Layout = () => {
     const [dashOpen, setDashOpen] = useState(false);
+    
 
   return (
     <div className='bg-body-400 flex font-main'>
       <div>
+        {dashOpen && (<div onClick={()=>{setDashOpen(false)}} className='h-[100%] w-[100%] z-[19] fixed bg-black bg-opacity-10 top-0 left-0'></div>)}
         <div
           className={`fixed top-0 left-0 z-[20] hidden md:block md:w-1/4 xl:w-1/5 sm:w-3/4 h-[100vh] bg-cblue-900
              `}
