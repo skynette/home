@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import CardV2 from "../CardV2";
 import cardGroup from "../../constants/cards";
 
-const CarouselV2 = () => {
+const CarouselVT = () => {
 	
 
 	const slide = cardGroup.slice(0,5);
@@ -35,4 +35,4 @@ const CarouselV2 = () => {
 	);
 };
 
-export default CarouselV2;
+export default CarouselVT;

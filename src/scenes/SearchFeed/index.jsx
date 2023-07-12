@@ -4,7 +4,7 @@ import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import { BiFilter } from 'react-icons/bi'
 import Pagination from '../../components/Pagination'
-import CarouselV2 from '../../components/carouselV2'
+import CarouselVT from '../../components/CarouselVT'
 import cardGroup from '../../constants/cards'
 import CardV3 from '../../components/CardV3'
 import Slider from 'rc-slider'
@@ -184,7 +184,7 @@ const SearchFeed = () => {
           <div className='bg-body-300 rounded-md pb-10'>
             <h3 className='text-lg text-body-800 pt-6 pl-6 font-bold'>Featured Properties</h3>
             <div className='flex justify-center'>
-              <CarouselV2 />
+              <CarouselVT />
             </div>
           </div>
           <div className='bg-body-300 py-6 rounded-lg mb-20'>
