@@ -76,14 +76,14 @@ const Dashboard = () => {
                         />
                     ))}
                 </div>
-                <div className="flex flex-col md:flex-row gap-6">
-                    <div className='md:basis-[60%] bg-body-300 mt-6 rounded-md h-[40vh] p-6'>
+                <div className="flex flex-col lg:flex-row gap-6">
+                    <div className='lg:basis-[60%] bg-body-300 mt-6 rounded-md h-[40vh] p-6 shrink'>
                         <h3 className='text-body-800 text-2xl font-semibold'>View Statistics</h3>
                         <div className='h-[90%]'>
                             <Graph data={graphData} />
                         </div>
                     </div>
-                    <div className='md:basis-[40%] bg-body-300 mt-6 flex flex-col gap-4 py-6 px-5 rounded-md'>
+                    <div className='lg:basis-[40%] bg-body-300 mt-6 flex flex-col gap-4 py-6 px-5 rounded-md shrink'>
                         <h3 className='text-body-800 text-xl font-semibold'>Recent Activities</h3>
                         {activities.map((activity, i) => {
                             if (activity.id === 'approved') {
