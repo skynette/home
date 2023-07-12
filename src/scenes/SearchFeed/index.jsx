@@ -218,8 +218,8 @@ const SearchFeed = () => {
           </div>
         </div>
         <div className='col-span-2'>
-          <div className='bg-body-300 text-center lg:flex lg:justify-between lg:items-center lg:px-10 py-6 rounded-md border border-body-500 mb-6'>
-            <h3 className='text-sm'>10 search results</h3>
+          <div className='bg-body-300 text-center flex-col md:flex-row md:justify-between items-center md:px-10 py-6 rounded-md border space-y-5 border-body-500 mb-6'>
+            <h3 className='font-semibold'>10 search results</h3>
             <div className='flex gap-4 justify-center'>
               <label htmlFor='age' className='border-r border-body-500 pr-4'>Status: <select className='border border-body-600 rounded-md p-1 outline-none' name='age' id='age'>
                 <option value="All Status">All Status</option>
