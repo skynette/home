@@ -7,7 +7,7 @@ import { BsHouses } from 'react-icons/bs'
 const Profile = () => {
   return (
     <div>
-      
+      Profile
     </div>
   )
 }
