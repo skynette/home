@@ -30,7 +30,7 @@ const Pagination = (props) => {
 
   return (
     <div >
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-0'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-5'>
         {itemsToDisplay.map((card, j) => (
           <Card
             key={j}

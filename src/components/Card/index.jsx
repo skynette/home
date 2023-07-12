@@ -20,7 +20,7 @@ const Card = (props) => {
 	} = props;
 
 	return (
-		<div className="h-[58vh] w-[93%] bg-body-300 m-auto mt-4 shadow-md hover:shadow-lg transform hover:scale-[1.02] hover:transition-transform hover:duration-500 rounded-lg mb-12 flex flex-col items-center justify-center font-main">
+		<div className="bg-body-300 shadow-md hover:shadow-lg transform hover:scale-[1.02] hover:transition-transform hover:duration-500 rounded-lg flex flex-col items-center justify-center font-main">
 			<div className="m-2 h-[98%] w-[95%] overflow-hidden">
 				<div className="w-[100%] h-[45%] relative">
 					<img
