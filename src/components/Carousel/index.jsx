@@ -40,7 +40,7 @@ const CarouselComponent = () => {
 	};
 
 	return (
-		<div className="w-[90vw] sm:w-[80vw] mt-10">
+		<div className="w-[90vw] sm:w-[80vw] mt-10 space-x-2">
 			<Slider {...settings}>
 				{cardGroup.map((card, j) => (
 					<Card

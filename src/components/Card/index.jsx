@@ -20,9 +20,9 @@ const Card = (props) => {
 	} = props;
 
 	return (
-		<div className="bg-body-300 shadow-md hover:shadow-lg transform hover:scale-[1.02] hover:transition-transform hover:duration-500 rounded-lg flex flex-col items-center justify-center font-main">
+		<div className=" w-[93%] my-4 pb-6 m-auto bg-body-300 shadow-md hover:shadow-lg transform hover:scale-[1.02] hover:transition-transform hover:duration-500 rounded-lg flex flex-col items-center justify-center font-main">
 			<div className="m-2 h-[98%] w-[95%] overflow-hidden">
-				<div className="w-[100%] h-[45%] relative">
+				<div className="aspect-video relative">
 					<img
 						src={img}
 						className="w-[100%] h-[100%] object-cover rounded-lg"
@@ -62,7 +62,7 @@ const Card = (props) => {
 				<div className="h-[15%] w-full px-2 flex justify-between items-center">
 					<div className="flex items-center gap-4">
 						<img
-							className="h-[50px] w-[50px] object-cover object-top rounded-full"
+							className="h-[50px] w-[50px] object-cover object-top rounded-full -translate-y-[6px]"
 							src={profileimg}
 						/>
 						<p className="text-sm text-body-800 ">{profilename}</p>
