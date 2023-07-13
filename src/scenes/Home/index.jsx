@@ -18,7 +18,7 @@ const Home = () => {
                 <Navbar color="body-300" bg="transparent"/>
                 <Hero />
             </div>
-            <div className="h-[100vh] w-screen flex flex-col items-center justify-center">
+            <div className="py-20 w-screen flex flex-col items-center justify-center">
                 <h2 className="text-body-800 font-bold text-3xl pt-8"> Featured Properties</h2>
                 <p className="text-body-500 mt-2">Handpicked properties by our team</p>
                 <div>
@@ -81,7 +81,7 @@ const Home = () => {
                     <h2 className="text-body-800 font-bold text-3xl pt-10">Why Choose Us</h2>
                     <p className="text-body-500 mt-2">We provide full service at every step.</p>
                 </div>
-                <div className="md:mx-[20vh] mx-4 my-10 lg:flex lg:gap-6" >
+                <div className="md:mx-[20vw] mx-4 my-10 lg:flex lg:gap-6" >
                     <div className="bg-body-300 text-center rounded-lg flex flex-col items-center mb-5 shadow-md hover:shadow-lg transform hover:scale-[1.02] hover:transition-transform hover:duration-500 city">
                         <div className="my-11">
                             <GiHighFive className="p-6 rounded-full bg-cred-200 h-[130px] w-[130px] text-cred-500 cicon" />
