@@ -60,7 +60,7 @@ const Dashboard = () => {
 
     return (
         <>
-            <div className='p-4 md:p-10 md:pr-4 font-main'>
+            <div className='p-4 md:p-20 md:pt-10 md:pr-4 font-main '>
                 <div className='mb-6'>
                     <h2 className='text-3xl font-semibold text-body-800 md:mt-10'>Howdy, Hasan</h2>
                     <p className='text-sm font-thin text-body-800'>We are glad to see you again!</p>

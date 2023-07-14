@@ -23,14 +23,14 @@ const Navbar = (props) => {
 				<nav className={`h-16 ${flexBetween}`}>
 					{/* left side */}
 					<div>
-						<h1 className={`text-2xl text-${color} hover:cursor-pointer`}>
+						<h1 onClick={()=>{navigate("/")}} className={`text-2xl text-${color} hover:cursor-pointer`}>
 							Home
 						</h1>
 					</div>
 
 					{/* right side */}
 					<div className={`hidden md:block ${flexBetween} md:transform md:translate-x-10`}>
-						<ul className={`${flexBetween} gap-4`}>
+						<ul className={`${flexBetween} gap-4 hover:cursor-pointer`}>
 							<li className={`text-${color}`}>About</li>
 							<li className={`text-${color}`}>Contact</li>
 							<li className={`text-${color}`} onClick={loginNav}>
@@ -41,11 +41,11 @@ const Navbar = (props) => {
 
 					<div className={`hidden md:flex md:items-center gap-2`}>
 
-						<h1 className={`text-${color} px-2 py-1 rounded-md  mr-4 hover:cursor-pointer border border-${color} hover:bg-${color} hover:text-body-600 font-semibold`}>
+						<h1 onClick={()=>{navigate("/listing/create")}} className={`text-${color} px-2 py-1 rounded-md  mr-4 hover:cursor-pointer border border-${color} hover:bg-${color} hover:text-body-600 font-semibold`}>
 							+ Add Listing
 						</h1>
 						
-						<FaUserCircle className="text-cblue-600 h-7 w-7" />
+						<FaUserCircle onClick={()=>{navigate('/user')}} className="text-cblue-600 h-7 w-7 hover:cursor-pointer" />
 					</div>
 
 					<div className="hover:cursor-pointer md:hidden">
@@ -63,7 +63,7 @@ const Navbar = (props) => {
 					>
 						{/* Navigation menu content */}
 						<div className="flex justify-between items-center h-16 px-4 border-b">
-							<h1 className="text-2xl text-cred-500">Home</h1>
+							<h1 onClick={()=>{navigate("/")}} className="text-2xl text-cred-500 cursor-pointer">Home</h1>
 							<MdClose
 								className="text-black h-7 w-7"
 								onClick={() => setIsNavOpen(!isNavOpen)}
@@ -71,9 +71,9 @@ const Navbar = (props) => {
 						</div>
 						<div className="bg-body-300 hover:cursor-pointer">
 							<ul className="flex flex-col justify-center items-start gap-4">
-								<li className="text-body-800 py-2 px-4 border-b w-full">About</li>
-								<li className="text-body-800 py-2 px-4 border-b w-full">Contact</li>
-								<li className="text-body-800 py-2 px-4 border-b w-full" onClick={loginNav}>
+								<li className="text-body-800 py-2 px-4 border-b w-full hover:cursor-pointer">About</li>
+								<li className="text-body-800 py-2 px-4 border-b w-full hover:cursor-pointer">Contact</li>
+								<li className="text-body-800 py-2 px-4 border-b w-full hover:cursor-pointer" onClick={loginNav}>
 									Login
 								</li>
 							</ul>
