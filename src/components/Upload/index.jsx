@@ -1,5 +1,5 @@
 import React from 'react'
-import {useState, useRef } from 'react'
+import { useState, useRef } from 'react'
 import Map from '../Map'
 import { AiOutlineCaretDown } from 'react-icons/ai'
 import { HiOutlineLocationMarker } from 'react-icons/hi'
@@ -34,8 +34,8 @@ const Upload = () => {
         countryRef.current.value = country;
         lat.current.value = latitude;
         lon.current.value = longitude;
-          setLats(latitude);
-          setLongs(longitude);
+        setLats(latitude);
+        setLongs(longitude);
       }).catch(() => {
         console.log("Error fetching data from API");
       })
@@ -146,6 +146,122 @@ const Upload = () => {
         <div className='mt-10 rounded-md overflow-hidden'>
           <Map latitude={lats} longitude={longs} info={label} />
         </div>
+      </div>
+      <div className='bg-body-300 p-6 pb-14 mt-8 rounded-md'>
+        <h3 className='my-6 text-2xl font-semibold text-body-800' >Detailed Information</h3>
+        <div className='lg:flex lg:gap-6'>
+          <div className='w-full'>
+            <label className='block text-body-800 my-2' htmlFor='landarea'>Land Area</label>
+            <input className='w-full h-12 rounded-md outline-none px-4 text-body-800 border border-body-400' id='landarea' name='landarea' type='text' />
+          </div>
+          <div className='w-full'>
+            <label className='block text-body-800 my-2' htmlFor='bedrooms'>Bedrooms</label>
+            <input className='w-full h-12 rounded-md outline-none px-4 text-body-800 border border-body-400' id='bedrooms' name='bedrooms' type='text' />
+          </div>
+          <div className='w-full'>
+            <label className='block text-body-800 my-2' htmlFor='bathrooms'>Bathrooms</label>
+            <input className='w-full h-12 rounded-md outline-none px-4 text-body-800 border border-body-400' id='bathrooms' name='bathrooms' type='text' />
+          </div>
+        </div>
+        <div className='lg:flex lg:gap-6'>
+          <div className='mt-6 w-full'>
+            <label className='block text-body-800 my-2' htmlFor='garage'>Garages</label>
+            <input className='w-full h-12 rounded-md outline-none px-4 text-body-800 border border-body-400' id='garage' name='garage' type='text' />
+          </div>
+          <div className='mt-6 w-full'>
+            <label className='block text-body-800 my-2' htmlFor='garagesize'>Garages Size</label>
+            <input className='w-full h-12 rounded-md outline-none px-4 text-body-800 border border-body-400' id='garagesize' name='garagesize' type='text' />
+          </div>
+        </div>
+        <div className='lg:flex lg:gap-6'>
+          <div className='mt-6 w-full'>
+            <label className='block text-body-800 my-2' htmlFor='yearbuilt'>Year Built</label>
+            <input className='w-full h-12 rounded-md outline-none px-4 text-body-800 border border-body-400' id='yearbuilt' name='yearbuilt' type='text' />
+          </div>
+          <div className='mt-6 w-full'>
+            <label className='block text-body-800 my-2' htmlFor='videourl'>Video URL</label>
+            <input className='w-full h-12 rounded-md outline-none px-4 text-body-800 border border-body-400' id='videourl' name='videourl' type='text' />
+          </div>
+        </div>
+        <div className=''>
+          <h3 className='my-6 mb-3 text-lg font-semibold text-body-800' >Amenities</h3>
+          <div className='gap-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
+            <div>
+              <label htmlFor="airconditioning" className='flex items-center my-2'><input id='airconditioning' name="airconditioning" type='checkbox' className='accent-cred-500 appearance-none h-4 w-4 cursor-pointer border border-body-400 rounded-md checkbox' /><svg className="absolute h-4 w-4 opacity-0 check-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clipRule="evenodd" />
+              </svg>
+                <span className='text-body-800 font-thin ml-2'>Air Conditioning</span></label>
+              <label htmlFor="Lawn" className='flex items-center my-2'><input id='Lawn' name="Lawn" type='checkbox' className='accent-cred-500 appearance-none h-4 w-4 cursor-pointer border border-body-400 rounded-md checkbox' /><svg className="absolute h-4 w-4 opacity-0 check-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clipRule="evenodd" />
+              </svg>
+                <span className='text-body-800 font-thin ml-2'>Lawn</span></label>
+              <label htmlFor="pool" className='flex items-center my-2'><input id='pool' name="swimmingpool" type='checkbox' className='accent-cred-500 appearance-none h-4 w-4 cursor-pointer border border-body-400 rounded-md checkbox' /><svg className="absolute h-4 w-4 opacity-0 check-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clipRule="evenodd" />
+              </svg>
+                <span className='text-body-800 font-thin ml-2'>Swimming Pool</span></label>
+            </div>
+            <div>
+              <label htmlFor="barbeque" className='flex items-center my-2'><input id='barbeque' name="barbeque" type='checkbox' className='accent-cred-500 appearance-none h-4 w-4 cursor-pointer border border-body-400 rounded-md checkbox' /><svg className="absolute h-4 w-4 opacity-0 check-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clipRule="evenodd" />
+              </svg>
+                <span className='text-body-800 font-thin ml-2'>Barbeque</span></label>
+              <label htmlFor="microwave" className='flex items-center my-2'><input id='microwave' name="microwave" type='checkbox' className='accent-cred-500 appearance-none h-4 w-4 cursor-pointer border border-body-400 rounded-md checkbox' /><svg className="absolute h-4 w-4 opacity-0 check-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clipRule="evenodd" />
+              </svg>
+                <span className='text-body-800 font-thin ml-2'>Microwave</span></label>
+              <label htmlFor="cable" className='flex items-center my-2'><input id='cable' name="cable" type='checkbox' className='accent-cred-500 appearance-none h-4 w-4 cursor-pointer border border-body-400 rounded-md checkbox' /><svg className="absolute h-4 w-4 opacity-0 check-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clipRule="evenodd" />
+              </svg>
+                <span className='text-body-800 font-thin ml-2'>TV Cable</span></label>
+            </div>
+            <div>
+              <label htmlFor="dryer" className='flex items-center my-2'><input id='dryer' name="dryer" type='checkbox' className='accent-cred-500 appearance-none h-4 w-4 cursor-pointer border border-body-400 rounded-md checkbox' /><svg className="absolute h-4 w-4 opacity-0 check-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clipRule="evenodd" />
+              </svg>
+                <span className='text-body-800 font-thin ml-2'>Dryer</span></label>
+              <label htmlFor="outdoorshower" className='flex items-center my-2'><input id='outdoorshower' name="outdoorshower" type='checkbox' className='accent-cred-500 appearance-none h-4 w-4 cursor-pointer border border-body-400 rounded-md checkbox' /><svg className="absolute h-4 w-4 opacity-0 check-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clipRule="evenodd" />
+              </svg>
+                <span className='text-body-800 font-thin ml-2'>Outdoor Shower</span></label>
+              <label htmlFor="washer" className='flex items-center my-2'><input id='washer' name="washer" type='checkbox' className='accent-cred-500 appearance-none h-4 w-4 cursor-pointer border border-body-400 rounded-md checkbox' /><svg className="absolute h-4 w-4 opacity-0 check-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clipRule="evenodd" />
+              </svg>
+                <span className='text-body-800 font-thin ml-2'>Washer</span></label>
+            </div>
+            <div>
+              <label htmlFor="gym" className='flex items-center my-2'><input id='gym' name="gym" type='checkbox' className='accent-cred-500 appearance-none h-4 w-4 cursor-pointer border border-body-400 rounded-md checkbox' /><svg className="absolute h-4 w-4 opacity-0 check-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clipRule="evenodd" />
+              </svg>
+                <span className='text-body-800 font-thin ml-2'>Gym</span></label>
+              <label htmlFor="refrigerator" className='flex items-center my-2'><input id='refrigerator' name="refrigerator" type='checkbox' className='accent-cred-500 appearance-none h-4 w-4 cursor-pointer border border-body-400 rounded-md checkbox' /><svg className="absolute h-4 w-4 opacity-0 check-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clipRule="evenodd" />
+              </svg>
+                <span className='text-body-800 font-thin ml-2'>Refrigerator</span></label>
+              <label htmlFor="wifi" className='flex items-center my-2'><input id='wifi' name="wifi" type='checkbox' className='accent-cred-500 appearance-none h-4 w-4 cursor-pointer border border-body-400 rounded-md checkbox' /><svg className="absolute h-4 w-4 opacity-0 check-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clipRule="evenodd" />
+              </svg>
+                <span className='text-body-800 font-thin ml-2'>WiFi</span></label>
+            </div>
+            <div>
+              <label htmlFor="laundry" className='flex items-center my-2'><input id='laundry' name="laundry" type='checkbox' className='accent-cred-500 appearance-none h-4 w-4 cursor-pointer border border-body-400 rounded-md checkbox' /><svg className="absolute h-4 w-4 opacity-0 check-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clipRule="evenodd" />
+              </svg>
+                <span className='text-body-800 font-thin ml-2'>Laundry</span></label>
+              <label htmlFor="sauna" className='flex items-center my-2'><input id='sauna' name="sauna" type='checkbox' className='accent-cred-500 appearance-none h-4 w-4 cursor-pointer border border-body-400 rounded-md checkbox' /><svg className="absolute h-4 w-4 opacity-0 check-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clipRule="evenodd" />
+              </svg>
+                <span className='text-body-800 font-thin ml-2'>Sauna</span></label>
+              <label htmlFor="windowcoverings" className='flex items-center my-2'><input id='windowcoverings' name="windowcoverings" type='checkbox' className='accent-cred-500 appearance-none h-4 w-4 cursor-pointer border border-body-400 rounded-md checkbox' /><svg className="absolute h-4 w-4 opacity-0 check-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clipRule="evenodd" />
+              </svg>
+                <span className='text-body-800 font-thin ml-2'>Window Coverings</span></label>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div className='bg-body-300 p-6 pb-14 mt-8 rounded-md'>
+        <h3 className='my-6 text-2xl font-semibold text-body-800' >Property media</h3>
       </div>
 
     </div>

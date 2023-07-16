@@ -86,10 +86,12 @@ select {
   .rc-slider-handle:hover {
 	border-color: #FA7170; /* Change to your desired hover color */
   }
-  .marker-label {
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-	white-space: nowrap;
-	transform: translateX(20px); /* Adjust the translation value as needed */
-  }
+
+.checkbox:checked{
+	background-color: #fa7170;
+}
+
+.checkbox:checked ~ .check-1{
+	opacity: 100;
+	color: white;
+}
