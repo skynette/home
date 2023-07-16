@@ -1,5 +1,6 @@
 import React from 'react'
-import { useRef } from 'react'
+import {useState, useRef } from 'react'
+import Map from '../Map'
 import { AiOutlineCaretDown } from 'react-icons/ai'
 import { HiOutlineLocationMarker } from 'react-icons/hi'
 const Upload = () => {
@@ -13,6 +14,10 @@ const Upload = () => {
   const lat = useRef(null);
   const lon = useRef(null);
 
+  const [longs, setLongs] = useState(0);
+  const [lats, setLats] = useState(0);
+  const [label, setLabel] = useState('');
+
   const getLocation = () => {
     navigator.geolocation.getCurrentPosition(position => {
       const { latitude, longitude } = position.coords;
@@ -21,6 +26,7 @@ const Upload = () => {
         console.log(data.address);
         const { city, country, house_number, neighbourhood, postcode, road, state, suburb } = data.address;
         addressRef.current.value = house_number + " " + road + " " + suburb;
+        setLabel(addressRef.current.value);
         countyRef.current.value = state;
         cityRef.current.value = city;
         neighbourhoodRef.current.value = neighbourhood;
@@ -28,6 +34,8 @@ const Upload = () => {
         countryRef.current.value = country;
         lat.current.value = latitude;
         lon.current.value = longitude;
+          setLats(latitude);
+          setLongs(longitude);
       }).catch(() => {
         console.log("Error fetching data from API");
       })
@@ -135,7 +143,11 @@ const Upload = () => {
             <input ref={countryRef} id='country' name='country' type='text' className='w-full h-12 rounded-md outline-none px-4 text-body-800 border border-body-400' />
           </div>
         </div>
+        <div className='mt-10 rounded-md overflow-hidden'>
+          <Map latitude={lats} longitude={longs} info={label} />
+        </div>
       </div>
+
     </div>
   )
 }
