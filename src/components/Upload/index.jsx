@@ -3,6 +3,7 @@ import { useState, useRef } from 'react'
 import Map from '../Map'
 import { AiOutlineCaretDown } from 'react-icons/ai'
 import { HiOutlineLocationMarker } from 'react-icons/hi'
+import { BsFillTrashFill, BsUpload } from 'react-icons/bs'
 const Upload = () => {
 
   const addressRef = useRef(null);
@@ -13,10 +14,15 @@ const Upload = () => {
   const countryRef = useRef(null);
   const lat = useRef(null);
   const lon = useRef(null);
+  const fileInputRef = useRef(null);
+  const floorplanRef = useRef(null);
+
 
   const [longs, setLongs] = useState(0);
   const [lats, setLats] = useState(0);
   const [label, setLabel] = useState('');
+  const [droppedImages, setDroppedImages] = useState([]);
+  const [uploadedFiles, setUploadedFiles] = useState([]);
 
   const getLocation = () => {
     navigator.geolocation.getCurrentPosition(position => {
@@ -43,6 +49,67 @@ const Upload = () => {
 
   }
 
+  const handleDrop = (e) => {
+    e.preventDefault();
+    const files = Array.from(e.dataTransfer.files);
+    const readerPromises = files.map((file) => {
+      return new Promise((resolve) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result);
+        reader.readAsDataURL(file);
+      });
+    });
+
+    Promise.all(readerPromises).then((results) => {
+      setDroppedImages([...droppedImages, ...results]);
+    });
+  };
+
+  const handleDragOver = (e) => {
+    e.preventDefault();
+  };
+
+  const handleDivClick = () => {
+    fileInputRef.current.click();
+  };
+
+  const handleFileInputChange = (e) => {
+    const files = Array.from(e.target.files);
+    const readerPromises = files.map((file) => {
+      return new Promise((resolve) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result);
+        reader.readAsDataURL(file);
+      });
+    });
+
+    Promise.all(readerPromises).then((results) => {
+      setDroppedImages([...droppedImages, ...results]);
+    });
+  };
+
+  const handleRemoveImage = (index) => {
+    const updatedImages = [...droppedImages];
+    updatedImages.splice(index, 1);
+    setDroppedImages(updatedImages);
+  };
+  const handleFileUpload = (event) => {
+    const files = Array.from(event.target.files);
+    const updatedFiles = files.map((file) => ({
+      name: file.name,
+      fileObject: file,
+    }));
+    setUploadedFiles((prevUploadedFiles) => [
+      ...prevUploadedFiles,
+      ...updatedFiles,
+    ]);
+  };
+
+  const handleDeleteFile = (fileName) => {
+    setUploadedFiles((prevUploadedFiles) =>
+      prevUploadedFiles.filter((file) => file.name !== fileName)
+    );
+  };
 
   return (
     <div className='p-4 md:p-20 md:pt-10 md:pr-4 font-main'>
@@ -262,6 +329,57 @@ const Upload = () => {
       </div>
       <div className='bg-body-300 p-6 pb-14 mt-8 rounded-md'>
         <h3 className='my-6 text-2xl font-semibold text-body-800' >Property media</h3>
+        <div className='grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+          {droppedImages.map((item, index) => (
+            <div key={index} className='relative my-6 rounded-md overflow-hidden'>
+              <img src={item} alt={`image ${index}`} className='aspect-square w-full content-center object-cover' />
+              <div className='absolute top-2 right-2'><BsFillTrashFill onClick={() => { handleRemoveImage(index) }} className='h-6 w-6 p-1 bg-cred-500 text-body-300 rounded-md' /></div>
+            </div>
+          )
+          )}
+        </div>
+        <div onDrop={handleDrop} onDragOver={handleDragOver} onClick={handleDivClick} className='h-[300px] w-full bg-body-400 flex flex-cols justify-center items-center rounded-md'>
+          <div className='flex flex-col items-center'>
+            <BsUpload className='text-cred-500 h-10 w-10 font-bold mb-4' />
+            <p className='text-xl text-body-800 font-bold'>Drag and drop images here</p>
+          </div>
+        </div>
+        <input
+          type="file"
+          ref={fileInputRef}
+          style={{ display: 'none' }}
+          onChange={handleFileInputChange}
+          multiple
+        />
+        <div className='mt-6'>
+          <h3 className='font-bold text-body-800 text-xl'>Floor plans</h3>
+          <div className='mt-6'>
+            <input className='absolute opacity-0'
+              ref={floorplanRef}
+              id='floorplans'
+              type="file"
+              name="floorplans"
+              style={{ display: 'none' }}
+              multiple
+              onChange={handleFileUpload}
+            />
+            <label htmlFor='floorplans' className='p-2 border border-body-800 rounded-md text-body-800 hover:bg-body-800 hover:text-body-300'>Upload Plans</label>
+          </div>
+          <div>
+            {uploadedFiles.map((file, index) => (
+              <div key={file.name} className='flex items-center'>
+                <p className={`${index === 0? 'mt-2': 'mt-auto'} mr-2 text-body-800`}>{file.name}</p>
+                <button
+                  className='text-cred-500'
+                  onClick={() => handleDeleteFile(file.name)}
+                >
+                  x
+                </button>
+              </div>
+            ))}
+          </div>
+
+        </div>
       </div>
 
     </div>
