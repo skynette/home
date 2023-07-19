@@ -23,7 +23,7 @@ const Layout = () => {
         >
           {/* Navigation menu content */}
           <div className="flex justify-between items-center h-20 px-4 border-b">
-            <h1 className="text-2xl text-cred-500">Home</h1>
+            <h1 onClick={()=>{navigate("/")}} className="text-2xl text-cred-500">Home</h1>
           </div>
           <div className="bg-cblue-900 hover:cursor-pointer">
             <div>
@@ -69,7 +69,7 @@ const Layout = () => {
         >
           {/* Navigation menu content */}
           <div className="flex justify-between items-center h-20 px-4 border-b">
-            <h1 className="text-2xl text-cred-500">Home</h1>
+            <h1 onClick={()=>{navigate("/")}} className="text-2xl text-cred-500">Home</h1>
             <MdClose
 								className="text-black h-7 w-7"
 								onClick={() => setDashOpen(!dashOpen)}

@@ -394,7 +394,7 @@ const Upload = () => {
 
             </div>
           </div>
-          <div className='mt-8 flex justify-end'>
+          <div className='mt-8'>
             <button className='py-3 px-10 text-body-300 bg-cred-500 border border-cred-500 hover:bg-body-400 hover:text-cred-500 rounded-md' type='submit'>Submit</button>
           </div>
         </form>
