@@ -5,6 +5,7 @@ import { AiOutlineCaretDown } from 'react-icons/ai'
 import { HiOutlineLocationMarker } from 'react-icons/hi'
 import { BsFillTrashFill, BsUpload } from 'react-icons/bs'
 import AmenitiesCheckboxGroup from './AmenitiesCheckBoxGroup'
+import PropertyInputField from './PropertInputField'
 const Upload = () => {
 
     const addressRef = useRef(null);
@@ -258,40 +259,22 @@ const Upload = () => {
                     </div>
                     <div className='bg-body-300 p-6 pb-14 mt-8 rounded-md'>
                         <h3 className='my-6 text-2xl font-semibold text-body-800' >Detailed Information</h3>
-                        <div className='lg:flex lg:gap-6'>
-                            <div className='w-full'>
-                                <label className='block text-body-800 my-2' htmlFor='landarea'>Land Area</label>
-                                <input className='w-full h-12 rounded-md outline-none px-4 text-body-800 border border-body-400' id='landarea' name='landarea' type='text' />
+                        <>
+                            <div className='lg:flex lg:gap-6'>
+                                <PropertyInputField label='Land Area' id='landarea' name='landarea' type='text' />
+                                <PropertyInputField label='Bedrooms' id='bedrooms' name='bedrooms' type='text' />
+                                <PropertyInputField label='Bathrooms' id='bathrooms' name='bathrooms' type='text' />
                             </div>
-                            <div className='w-full'>
-                                <label className='block text-body-800 my-2' htmlFor='bedrooms'>Bedrooms</label>
-                                <input className='w-full h-12 rounded-md outline-none px-4 text-body-800 border border-body-400' id='bedrooms' name='bedrooms' type='text' />
+                            <div className='lg:flex lg:gap-6'>
+                                <PropertyInputField label='Garages' id='garage' name='garage' type='text' />
+                                <PropertyInputField label='Garages Size' id='garagesize' name='garagesize' type='text' />
                             </div>
-                            <div className='w-full'>
-                                <label className='block text-body-800 my-2' htmlFor='bathrooms'>Bathrooms</label>
-                                <input className='w-full h-12 rounded-md outline-none px-4 text-body-800 border border-body-400' id='bathrooms' name='bathrooms' type='text' />
+                            <div className='lg:flex lg:gap-6'>
+                                <PropertyInputField label='Year Built' id='yearbuilt' name='yearbuilt' type='text' />
+                                <PropertyInputField label='Video URL' id='videourl' name='videourl' type='text' />
                             </div>
-                        </div>
-                        <div className='lg:flex lg:gap-6'>
-                            <div className='mt-6 w-full'>
-                                <label className='block text-body-800 my-2' htmlFor='garage'>Garages</label>
-                                <input className='w-full h-12 rounded-md outline-none px-4 text-body-800 border border-body-400' id='garage' name='garage' type='text' />
-                            </div>
-                            <div className='mt-6 w-full'>
-                                <label className='block text-body-800 my-2' htmlFor='garagesize'>Garages Size</label>
-                                <input className='w-full h-12 rounded-md outline-none px-4 text-body-800 border border-body-400' id='garagesize' name='garagesize' type='text' />
-                            </div>
-                        </div>
-                        <div className='lg:flex lg:gap-6'>
-                            <div className='mt-6 w-full'>
-                                <label className='block text-body-800 my-2' htmlFor='yearbuilt'>Year Built</label>
-                                <input className='w-full h-12 rounded-md outline-none px-4 text-body-800 border border-body-400' id='yearbuilt' name='yearbuilt' type='text' />
-                            </div>
-                            <div className='mt-6 w-full'>
-                                <label className='block text-body-800 my-2' htmlFor='videourl'>Video URL</label>
-                                <input className='w-full h-12 rounded-md outline-none px-4 text-body-800 border border-body-400' id='videourl' name='videourl' type='text' />
-                            </div>
-                        </div>
+                        </>
+
                         <div className=''>
                             <h3 className='my-6 mb-3 text-lg font-semibold text-body-800'>Amenities</h3>
                             <AmenitiesCheckboxGroup amenities={amenitiesList} onChange={handleAmenityChange} />
