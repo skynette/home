@@ -351,7 +351,7 @@ const Upload = () => {
               )
               )}
             </div>
-            <div onDrop={handleDrop} onDragOver={handleDragOver} onClick={handleDivClick} className='h-[300px] w-full bg-body-400 flex flex-cols justify-center items-center rounded-md'>
+            <div onDrop={handleDrop} onDragOver={handleDragOver} onClick={handleDivClick} className='h-[300px] w-full bg-body-400 flex flex-cols justify-center items-center rounded-md hover:cursor-pointer'>
               <div className='flex flex-col items-center'>
                 <BsUpload className='text-cred-500 h-10 w-10 font-bold mb-4' />
                 <p className='text-xl text-body-800 font-bold'>Drag and drop images here</p>
@@ -376,7 +376,7 @@ const Upload = () => {
                   multiple
                   onChange={handleFileUpload}
                 />
-                <label htmlFor='floorplans' className='p-2 border border-body-800 rounded-md text-body-800 hover:bg-body-800 hover:text-body-300'>Upload Plans</label>
+                <label htmlFor='floorplans' className='p-2 border border-body-800 rounded-md text-body-800 hover:bg-body-800 hover:text-body-300 hover:cursor-pointer'>Upload Plans</label>
               </div>
               <div>
                 {uploadedFiles.map((file, index) => (
