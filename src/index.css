@@ -70,6 +70,14 @@ select {
 	@apply bg-cred-500 text-body-300;
 } 
 
+.search:hover .searchicon{
+	@apply text-cred-500;
+}
+
+.senddiv:hover .send{
+	@apply text-cred-500 cursor-pointer;
+}
+
 .rc-slider-track {
 	background-color: #FA7170; /* Change to your desired color */
   }
