@@ -43,12 +43,12 @@ const Properties = () => {
           <h3 className='text-3xl font-semibold text-body-800 md:mt-10'>My Properties</h3>
           <p className='text-sm font-thin text-body-800'>We are glad to see you again!</p>
           </div>
-          <div className='relative p-6 md:basis-1/3 md:mt-10'>
+          <div className='relative p-6 pr-0 md:basis-1/3 md:mt-10'>
             <input
               className='w-full h-12 rounded-md outline-none px-4 pr-[17%] text-body-800 border border-body-400'
               placeholder='Search'
             />
-            <div className='h-12 w-[15%] rounded-e-md text-body-800 bg-white border-r border-t border-b border-body-400 absolute right-6 top-6 z-10 flex justify-center items-center search hover:border-cred-500'>
+            <div className='h-12 w-[15%] rounded-e-md text-body-800 bg-white border-r border-t border-b border-body-400 absolute right-0 top-6 z-10 flex justify-center items-center search hover:border-cred-500'>
               <AiOutlineSearch className='text-body-500 h-6 w-6 searchicon' />
             </div>
           </div>
@@ -57,7 +57,7 @@ const Properties = () => {
             <div className='w-full overflow-x-auto rounded-md'>
               <table className='w-[1055px] min-h-[90vh]'>
                 <tr className='bg-cblue-1000'>
-                  <th className='py-6 text-body-300 w-[40%] md:w-[50%]'>Listing Title</th>
+                  <th className='py-6 pl-4 text-left text-body-300 w-[40%] md:w-[50%]'>Listing Title</th>
                   <th className='text-body-300'>Date Published</th>
                   <th className='text-body-300'>Status</th>
                   <th className='text-body-300'>View</th>
