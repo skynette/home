@@ -84,8 +84,8 @@ const Properties = () => {
                   <td>
                     <div className='flex justify-center items-center'>
                       <div className='flex flex-col gap-1'>
-                        <div className='p-1 bg-body-400 w-8 h-8 rounded-md flex items-center justify-center'><AiOutlineEdit className='bg-body-400 w-6 h-6 text-cred-500' /></div>
-                        <div className='p-1 bg-body-400 w-8 h-8 rounded-md flex items-center justify-center'><BsTrash className='bg-body-400 w-6 h-6 text-cred-500' /></div>
+                        <div className='hover:cursor-pointer p-1 bg-body-400 w-8 h-8 rounded-md flex items-center justify-center'><AiOutlineEdit className='bg-body-400 w-6 h-6 text-cred-500' /></div>
+                        <div className='hover:cursor-pointer p-1 bg-body-400 w-8 h-8 rounded-md flex items-center justify-center'><BsTrash className='bg-body-400 w-6 h-6 text-cred-500' /></div>
                       </div>
                     </div>
                   </td>
