@@ -21,7 +21,7 @@ const Message = () => {
                 <div className='h-[80vh] lg:basis-1/3 flex flex-col gap-6 bg-body-300 rounded-md overflow-hidden'>
                     <div className='relative p-6'>
                         <input
-                            className='w-full h-12 rounded-md outline-none px-4 text-body-800 border border-body-400'
+                            className='w-full h-12 rounded-md outline-none px-4 pr-[17%] text-body-800 border border-body-400'
                             placeholder='Search'
                             value={findUser}
                             onChange={(e) => {
@@ -45,7 +45,7 @@ const Message = () => {
                     </div>
                     <div className='relative px-6'>
                         <input
-                            className='w-full h-14 bg-body-400 text-body-800 rounded-md outline-none px-4 m-2'
+                            className='w-full h-14 bg-body-400 text-body-800 rounded-md outline-none px-4 pr-20 m-2'
                             placeholder='Enter text here...'
                         />
                         <div className='absolute top-2 right-6 h-14 w-[10%] flex justify-center items-center senddiv'>
