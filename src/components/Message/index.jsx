@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { AiOutlineSearch, AiOutlineSend } from 'react-icons/ai'
+import Copyright from '../Copyright'
 const Message = () => {
     const [findUser, setFindUser] = useState('');
     const searchResults = [];
@@ -10,6 +11,7 @@ const Message = () => {
     }, [findUser])
 
     return (
+        <>
         <div className='p-4 md:p-20 md:pt-10 md:pr-4 font-main'>
             <div className='mb-6'>
                 <h3 className='text-3xl font-semibold text-body-800 md:mt-10'>Message</h3>
@@ -53,6 +55,8 @@ const Message = () => {
                 </div>
             </div>
         </div>
+        <Copyright />
+        </>
     )
 }
 
