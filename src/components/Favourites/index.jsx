@@ -52,8 +52,8 @@ const Favourites = () => {
         </div>
         <div className='bg-body-300 p-6 pb-14 rounded-md'>
           {itemsToDisplay.map((card, j) => (
-            <div className='flex justify-between'>
-              <div key={j} className='py-4 pl-2 xl:basis-1/2'>
+            <div key={j} className='flex justify-between'>
+              <div className='py-4 pl-2  xl:basis-1/2'>
                 <CardV4
 
                   price={card.price}
