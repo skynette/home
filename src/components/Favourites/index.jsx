@@ -37,7 +37,7 @@ const Favourites = () => {
       <div className='p-4 md:p-20 md:pt-10 md:pr-4 font-main'>
         <div className='mb-1 md:mb-6 md:flex md:items-center md:justify-between'>
           <div>
-            <h3 className='text-3xl font-semibold text-body-800 md:mt-10'>My Properties</h3>
+            <h3 className='text-3xl font-semibold text-body-800 md:mt-10'>My Favorites</h3>
             <p className='text-sm font-thin text-body-800'>We are glad to see you again!</p>
           </div>
           <div className='relative p-6 px-0 md:basis-1/3 md:mt-10'>
