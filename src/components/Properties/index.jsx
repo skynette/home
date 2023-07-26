@@ -43,7 +43,7 @@ const Properties = () => {
           <h3 className='text-3xl font-semibold text-body-800 md:mt-10'>My Properties</h3>
           <p className='text-sm font-thin text-body-800'>We are glad to see you again!</p>
           </div>
-          <div className='relative p-6 pr-0 md:basis-1/3 md:mt-10'>
+          <div className='relative p-6 px-0 md:basis-1/3 md:mt-10'>
             <input
               className='w-full h-12 rounded-md outline-none px-4 pr-[17%] text-body-800 border border-body-400'
               placeholder='Search'

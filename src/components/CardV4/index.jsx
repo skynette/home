@@ -12,10 +12,12 @@ const CardV4 = (props) => {
             </div>
             <div className='w-[40%]'>
                 <h3 className='font-bold text-body-800 text-lg'>{name}</h3>
-                <p className="text-sm font-light pt-1 pl-2 flex items-center text-body-800">
-                    <CiLocationOn />
+                <div className="text-sm font-light pt-1 pl-2 flex items-center text-body-800">
+                    <div className='pb-2'>
+                    <CiLocationOn className='inline'/>
                     {location}
-                </p>
+                    </div>
+                </div>
                 <h3 className="font-semibold text-cred-500 text-md">
                     {price}/<span className="text-sm">mo</span></h3>
             </div>

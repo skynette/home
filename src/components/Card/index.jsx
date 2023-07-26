@@ -49,10 +49,12 @@ const Card = (props) => {
 				</div>
 				<p className="text-cred-600 text-sm pt-2 pl-2">{type}</p>
 				<h3 className="font-bold text-body-800 text-lg pl-2">{name}</h3>
-				<p className="text-sm font-light pt-2 pl-2 flex items-center text-body-800">
-					<CiLocationOn />
-					{location}
-				</p>
+				<div className="text-sm font-light pt-1 pl-2 flex items-center text-body-800">
+                    <div className='py-2 flex items-center'>
+                    <CiLocationOn className='inline'/>
+                    {location}
+                    </div>
+                </div>
 				<div className="flex pt-3 pl-2 gap-8">
 					<p className="text-sm text-body-800">Beds: {beds}</p>
 					<p className="text-sm text-body-800">Baths: {baths}</p>
