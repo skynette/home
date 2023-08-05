@@ -32,7 +32,7 @@ const Profile = () => {
         <div className='bg-body-300 p-6 pb-14 rounded-md'>
           <h4 className='text-body-800 font-semibold text-lg mb-4'>Profile Information</h4>
           <div
-            className='w-[250px] h-[300px] relative rounded-md mb-6'>
+            className='w-[250px] h-[300px] relative rounded-md mb-6 bg-body-400'>
             <img src={image} className='w-full h-full object-center object-cover rounded-md' />
             <input className='absolute opacity-0'
               style={{ display: "none" }}
