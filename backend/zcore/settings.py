@@ -139,7 +139,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static_cdn")
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
-# AUTH_USER_MODEL = "users_account.CustomUser"
+AUTH_USER_MODEL = "authentication.User"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
