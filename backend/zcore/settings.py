@@ -152,7 +152,7 @@ CORS_ALLOWED_ORIGINS = ['']
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-		
+		'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
 
     'NON_FIELD_ERRORS_KEY': 'error',
@@ -176,3 +176,8 @@ SPECTACULAR_SETTINGS = {
     'SERVE_INCLUDE_SCHEMA': False,
 }
 
+EMAIL_USE_TLS = True
+EMAIL_HOST = os.getenv("EMAIL_HOST")
+EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
+EMAIL_PORT = 587

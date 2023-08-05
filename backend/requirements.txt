@@ -4,6 +4,7 @@ autopep8==2.0.1
 Django==3.2
 django-filter==23.2
 djangorestframework==3.14.0
+djangorestframework-simplejwt==5.2.2
 drf-spectacular==0.26.2
 inflection==0.5.1
 jsonschema==4.18.6
