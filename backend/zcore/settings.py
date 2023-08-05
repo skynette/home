@@ -154,6 +154,8 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
 		
     ),
+
+    'NON_FIELD_ERRORS_KEY': 'error',
 	
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',    
 	'NON_FIELD_ERRORS_KEY': 'error',
