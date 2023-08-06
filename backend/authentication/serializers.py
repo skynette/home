@@ -1,6 +1,12 @@
+from django.urls import reverse
 from rest_framework import serializers
 from rest_framework.exceptions import AuthenticationFailed
+from django.contrib.sites.shortcuts import get_current_site
 from django.contrib.auth import get_user_model, authenticate
+from django.contrib.auth.tokens import PasswordResetTokenGenerator
+from django.utils.encoding import smart_str, force_str, force_bytes, DjangoUnicodeDecodeError
+from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
+from .utils import Util
 
 User = get_user_model()
 
@@ -70,3 +76,35 @@ class LoginSerializer(serializers.ModelSerializer):
             'username': user.username,
             'tokens': user.tokens()
         }
+
+
+class ResetPasswordEmailRequestSerializer(serializers.Serializer):
+    email = serializers.EmailField(min_length=2)
+
+    class Meta:
+        fields = ['email']
+        
+    def validate(self, attrs):
+        email = attrs["data"].get('email', '')
+        if User.objects.filter(email=email).exists():
+            user = User.objects.get(email=email)
+            uidb64 = urlsafe_base64_encode(force_bytes(user.pk))
+            token = PasswordResetTokenGenerator().make_token(user)
+
+            current_site = get_current_site(request=attrs["data"].get("request")).domain
+            relativeLink = reverse("authentication:password_reset_confirm", kwargs={'uidb64': uidb64, 'token': token})
+            absurl = "http://" + current_site + relativeLink
+            email_body = "Hi \n" +  " Use the link below to reset your password \n" + absurl
+            data = {
+                "subject": "Reset your password",
+                "email_body": email_body,
+                "to_email": user.email,
+            }
+            Util.send_email(data)
+
+        else:
+            raise serializers.ValidationError(
+                {'email': ('There is no user with this email')})
+        
+        return attrs
+    

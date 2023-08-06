@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.contrib.auth import get_user_model
 from django.contrib.sites.shortcuts import get_current_site
-from authentication.serializers import RegisterSerializer, EmailVerificationSerializer, LoginSerializer
+from authentication.serializers import RegisterSerializer, EmailVerificationSerializer, LoginSerializer, ResetPasswordEmailRequestSerializer
 from authentication.renderers import UserRenderer
 from drf_spectacular.utils import extend_schema
 from .utils import Util
@@ -98,3 +98,31 @@ class LoginAPIView(generics.GenericAPIView):
 
 
 login_view = LoginAPIView.as_view() 
+
+
+class PasswordResetRequestAPIView(generics.GenericAPIView):
+    serializer_class = ResetPasswordEmailRequestSerializer
+
+    @extend_schema(
+        request=ResetPasswordEmailRequestSerializer,
+        responses={200: ResetPasswordEmailRequestSerializer},
+        description="Password reset request view",
+        tags=["Authentication"],
+        versions=["v1"]
+    )
+    def post(self, request):
+        data = {"request": request, "data": request.data}
+        serializer = self.serializer_class(data=data)
+        serializer.is_valid(raise_exception=True)
+        return Response({"success": "Password reset email sent"}, status=status.HTTP_200_OK)
+
+
+request_reset_email_view = PasswordResetRequestAPIView.as_view()
+
+
+class PasswordTokenVerifyAPIView(generics.GenericAPIView):
+    def get(self, request, uidb64, token):
+        pass
+
+
+password_reset_confirm_view = PasswordTokenVerifyAPIView.as_view()
