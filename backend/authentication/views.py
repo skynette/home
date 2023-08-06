@@ -6,6 +6,8 @@ from django.contrib.auth import get_user_model
 from django.contrib.sites.shortcuts import get_current_site
 from authentication.serializers import RegisterSerializer
 from .utils import Util
+import jwt
+from django.conf import settings
 
 
 User = get_user_model()
@@ -41,6 +43,20 @@ user_registration_view = UserRegistrationView.as_view()
 
 class VerifyEmailView(generics.GenericAPIView):
     def get(self, request):
-        pass
+        token = request.GET.get("token")
+        try:
+            payload = jwt.decode(token, settings.SECRET_KEY, algorithms=["HS256"])
+            user = User.objects.get(id=payload["user_id"])
+            if not user.is_verified:
+                user.is_verified = True
+                user.save()
+            return Response({"email": "Successfully activated"}, status=status.HTTP_200_OK)
+        # when the token is expired
+        except jwt.ExpiredSignatureError as identifier:
+            return Response({"error": "Activation Link Expired"}, status=status.HTTP_400_BAD_REQUEST)
+        # when the token is invalid
+        except jwt.exceptions.DecodeError as identifier:
+            return Response({"error": "Invalid token"}, status=status.HTTP_400_BAD_REQUEST)
+
 
 email_verify_view = VerifyEmailView.as_view()
