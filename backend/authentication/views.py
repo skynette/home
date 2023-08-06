@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.contrib.auth import get_user_model
 from django.contrib.sites.shortcuts import get_current_site
-from authentication.serializers import RegisterSerializer, EmailVerificationSerializer
+from authentication.serializers import RegisterSerializer, EmailVerificationSerializer, LoginSerializer
 from drf_spectacular.utils import extend_schema
 from .utils import Util
 import jwt
@@ -76,3 +76,22 @@ class VerifyEmailView(generics.GenericAPIView):
 
 
 email_verify_view = VerifyEmailView.as_view()
+
+
+class LoginAPIView(generics.GenericAPIView):
+    serializer_class = LoginSerializer
+
+    @extend_schema(
+        request="",
+        responses={200: LoginSerializer},
+        description="Login view",
+        tags=["Authentication"],
+        versions=["v1"]
+    )
+    def post(self, request):
+        serializer = self.serializer_class(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+login_view = LoginAPIView.as_view() 
