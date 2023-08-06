@@ -5,6 +5,7 @@ from rest_framework_simplejwt.tokens import RefreshToken
 from django.contrib.auth import get_user_model
 from django.contrib.sites.shortcuts import get_current_site
 from authentication.serializers import RegisterSerializer, EmailVerificationSerializer, LoginSerializer
+from authentication.renderers import UserRenderer
 from drf_spectacular.utils import extend_schema
 from .utils import Util
 import jwt
@@ -15,6 +16,7 @@ User = get_user_model()
 
 class UserRegistrationView(generics.GenericAPIView):
     serializer_class = RegisterSerializer
+    renderer_classes = (UserRenderer,)
 
     @extend_schema(
         request=RegisterSerializer,
@@ -80,6 +82,7 @@ email_verify_view = VerifyEmailView.as_view()
 
 class LoginAPIView(generics.GenericAPIView):
     serializer_class = LoginSerializer
+    renderer_classes = (UserRenderer,)
 
     @extend_schema(
         request="",
