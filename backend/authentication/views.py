@@ -4,7 +4,8 @@ from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.contrib.auth import get_user_model
 from django.contrib.sites.shortcuts import get_current_site
-from authentication.serializers import RegisterSerializer
+from authentication.serializers import RegisterSerializer, EmailVerificationSerializer
+from drf_spectacular.utils import extend_schema
 from .utils import Util
 import jwt
 from django.conf import settings
@@ -15,6 +16,13 @@ User = get_user_model()
 class UserRegistrationView(generics.GenericAPIView):
     serializer_class = RegisterSerializer
 
+    @extend_schema(
+        request=RegisterSerializer,
+        responses={201: RegisterSerializer},
+        description="User registration view",
+        tags=["Authentication"],
+        versions=["v1"]
+    )
     def post(self, request):
         user = request.data
         serializer = self.serializer_class(data=user)
@@ -42,6 +50,14 @@ user_registration_view = UserRegistrationView.as_view()
 
 
 class VerifyEmailView(generics.GenericAPIView):
+    serializer_class = EmailVerificationSerializer
+    @extend_schema(
+        request=EmailVerificationSerializer,
+        description="Email verification view",
+        tags=["Authentication"],
+        parameters=["token", "str", "query", "Token to verify email"],
+        versions=["v1"]
+    )
     def get(self, request):
         token = request.GET.get("token")
         try:
