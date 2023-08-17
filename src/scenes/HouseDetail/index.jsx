@@ -39,7 +39,7 @@ const HouseDetail = () => {
 
   const ratingChanged = (newRating) => {
     setStars(newRating);
-    // You can handle the new rating here
+    
   };
 
 
