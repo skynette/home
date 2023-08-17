@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Navbar from '../../components/Navbar'
 import Map from '../../components/Map'
 import { AiOutlineHeart, AiOutlineShareAlt } from "react-icons/ai"
@@ -14,6 +14,9 @@ import CardV3 from '../../components/CardV3'
 import CarouselVT from '../../components/CarouselVT'
 import cardGroup from '../../constants/cards'
 import Footer from '../../components/Footer'
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import Image1 from "../../assets/featured Pages/vu-anh-TiVPTYCG_3E-unsplash.jpg"
 import Image2 from "../../assets/featured Pages/todd-kent-178j8tJrNlc-unsplash.jpg"
@@ -34,19 +37,68 @@ import Image12 from "../../assets/featured Pages/digital-marketing-agency-ntwrk-
 const HouseDetail = () => {
   const [accordionOpen, setAccordionOpen] = useState(false);
   const [stars, setStars] = useState(0);
+  const [slideIndex, setSlideIndex] = useState(0);
+  const [modalOpen, setModalOpen] = useState(false);
 
   const v3Items = cardGroup.slice(0, 3);
 
   const ratingChanged = (newRating) => {
     setStars(newRating);
-    
+
   };
 
+  const handleClick = (number) => {
+    setModalOpen(true);
+    setSlideIndex(number);
+
+  };
+
+  const handleCarClick = (e) =>{
+    e.stopPropagation();
+
+  }
+  useEffect(() => {
+    if (modalOpen) {
+      document.body.style.overflow = 'hidden'; // Disable scrolling
+    } else {
+      document.body.style.overflow = 'auto';   // Enable scrolling
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto';   // Re-enable scrolling when component unmounts
+    };
+  }, [modalOpen]);
 
 
+  const settings = {
+    dots: true,
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: slideIndex
+  };
 
-  return (
+  return (<>
     <div className='bg-body-300'>
+      {modalOpen && (<div className='fixed w-[100vw] z-20 h-[100vh] bg-body-800 bg-opacity-90 flex flex-cols justify-center items-center' onClick={() => setModalOpen(false)}>
+        <div className='w-[100vw] h-[100vh] p-4 py-20 md:p-10 md:pb-20 xl:px-40 font-main flex flex-col items-center justify-center'>
+          <div className={`w-full md:w-2/3  aspect-[16/10] bg-body-300`} onClick={handleCarClick}>
+            <Slider {...settings}>
+              <img className='w-full aspect-[16/10] object-cover object-center' src={Image3} />
+              <img className='w-full aspect-[16/10] object-cover object-center' src={Image4} />
+              <img className='w-full aspect-[16/10] object-cover object-center' src={Image5} />
+              <img className='w-full aspect-[16/10] object-cover object-center' src={Image6} />
+              <img className='w-full aspect-[16/10] object-cover object-center' src={Image7} />
+              <img className='w-full aspect-[16/10] object-cover object-center' src={Image8} />
+              <img className='w-full aspect-[16/10] object-cover object-center' src={Image9} />
+            </Slider>
+
+          </div>
+        </div>
+      </div>
+      )}
       <Navbar color="body-300" bg="cblue-1000" />
       <div className='p-4 py-20 md:p-10 md:pb-20 xl:px-40 md:pr-4 font-main'>
         <div className='lg:flex lg:justify-between lg:items-center'>
@@ -72,15 +124,15 @@ const HouseDetail = () => {
         </div>
         <div className='md:flex md:gap-6'>
           <div className='basis-2/3 w-full aspect-[16/10] mb-4'>
-            <img className='w-full h-full object-cover object-center rounded-md' src={Image3} />
+            <img onClick={() => { handleClick(0) }} className='w-full h-full object-cover object-center rounded-md' src={Image3} />
           </div>
           <div className='basis-1/3 grid grid-cols-2 gap-6'>
-            <img className='w-full h-[17vh] object-cover object-center rounded-md' src={Image4} />
-            <img className='w-full h-[17vh] object-cover object-center rounded-md' src={Image5} />
-            <img className='w-full h-[17vh] object-cover object-center rounded-md' src={Image6} />
-            <img className='w-full h-[17vh] object-cover object-center rounded-md' src={Image7} />
-            <img className='w-full h-[17vh] object-cover object-center rounded-md' src={Image8} />
-            <img className='w-full h-[17vh] object-cover object-center rounded-md' src={Image9} />
+            <img onClick={() => { handleClick(1) }} className='w-full h-[17vh] object-cover object-center rounded-md' src={Image4} />
+            <img onClick={() => { handleClick(2) }} className='w-full h-[17vh] object-cover object-center rounded-md' src={Image5} />
+            <img onClick={() => { handleClick(3) }} className='w-full h-[17vh] object-cover object-center rounded-md' src={Image6} />
+            <img onClick={() => { handleClick(4) }} className='w-full h-[17vh] object-cover object-center rounded-md' src={Image7} />
+            <img onClick={() => { handleClick(5) }} className='w-full h-[17vh] object-cover object-center rounded-md' src={Image8} />
+            <img onClick={() => { handleClick(6) }} className='w-full h-[17vh] object-cover object-center rounded-md' src={Image9} />
           </div>
         </div>
 
@@ -170,7 +222,7 @@ const HouseDetail = () => {
             <div className='bg-body-300 p-8 rounded-md mt-8 border-body-500'>
               <h3 className='text-body-800 text-xl font-bold'>Property video</h3>
               <div className='mt-10'>
-                <iframe className='w-full aspect-video rounded-md' src="https://www.youtube.com/embed/quJzdnXuNDc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                <iframe className='w-full aspect-video rounded-md' src="https://www.youtube.com/embed/quJzdnXuNDc" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
               </div>
             </div>
             <div className='bg-body-300 p-8 rounded-md mt-8 border-body-500'>
@@ -288,8 +340,9 @@ const HouseDetail = () => {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
+  </>
   )
 }
 
