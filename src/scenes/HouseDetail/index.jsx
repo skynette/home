@@ -291,7 +291,7 @@ const HouseDetail = () => {
                 </div>
                 <textarea name='reviews' placeholder='Your Review' className='w-full h-40 rounded-md outline-none px-4 pt-4 border border-body-400' />
                 <div className='mt-4'>
-                  <button className='py-3 px-10 text-body-300 bg-cred-500 border border-cred-500 hover:bg-body-400 hover:text-cred-500 rounded-md' type='submit'>Submit Review</button>
+                  <button className='py-3 px-10 text-body-300 bg-cred-500 border border-cred-500 hover:bg-body-300 hover:text-cred-500 rounded-md' type='submit'>Submit Review</button>
                 </div>
               </form>
             </div>
