@@ -43,9 +43,8 @@ const CarouselComponent = () => {
 		<div className="w-[90vw] sm:w-[80vw] mt-10">
 			<Slider {...settings}>
 				{cardGroup.map((card, j) => (
-					<div className="my-4">
+					<div className="my-4" key={j}>
 						<Card
-							key={j}
 							type={card.type}
 							price={card.price}
 							img={card.img}

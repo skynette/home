@@ -4,7 +4,7 @@ import Copyright from '../Copyright'
 import { AiOutlineCaretDown } from 'react-icons/ai'
 import { HiOutlineLocationMarker } from 'react-icons/hi'
 import { BsFillTrashFill, BsUpload } from 'react-icons/bs'
-import AmenitiesCheckboxGroup from './AmenitiesCheckBoxGroup'
+import AmenitiesCheckboxGroup from './AmenitiesCheckboxGroup'
 import PropertyInputField from './PropertInputField'
 const Upload = () => {
 
