@@ -10,7 +10,7 @@ from django.contrib.auth.tokens import PasswordResetTokenGenerator
 from django.utils.encoding import smart_str, force_str, force_bytes, DjangoUnicodeDecodeError
 from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 from .utils import Util
-from drf_spectacular.utils import extend_schema
+from drf_spectacular.utils import extend_schema, OpenApiParameter
 from .utils import Util
 import jwt
 from django.conf import settings
@@ -27,11 +27,11 @@ class UserRegistrationView(generics.GenericAPIView):
         responses={201: RegisterSerializer},
         description="User registration view",
         tags=["Authentication"],
-        versions=["v1"]
+    
     )
     def post(self, request):
         user = request.data
-        serializer = self.serializer_class(data=user)
+        serializer = self.get_serializer(data=user)
         serializer.is_valid(raise_exception=True)
         serializer.save()
         user_data = serializer.data
@@ -62,8 +62,7 @@ class VerifyEmailView(generics.GenericAPIView):
         request=EmailVerificationSerializer,
         description="Email verification view",
         tags=["Authentication"],
-        parameters=["token", "str", "query", "Token to verify email"],
-        versions=["v1"]
+        parameters=[EmailVerificationSerializer,],
     )
     def get(self, request):
         token = request.GET.get("token")
@@ -90,14 +89,13 @@ class LoginAPIView(generics.GenericAPIView):
     renderer_classes = (UserRenderer,)
 
     @extend_schema(
-        request="",
+        request=LoginSerializer,
         responses={200: LoginSerializer},
         description="Login view",
         tags=["Authentication"],
-        versions=["v1"]
     )
     def post(self, request):
-        serializer = self.serializer_class(data=request.data)
+        serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
@@ -114,7 +112,6 @@ class PasswordResetRequestAPIView(generics.GenericAPIView):
         responses={200: ResetPasswordEmailRequestSerializer},
         description="Password reset request view",
         tags=["Authentication"],
-        versions=["v1"]
     )
     def post(self, request):
         serializer = self.serializer_class(data=request.data)
@@ -144,6 +141,11 @@ request_reset_email_view = PasswordResetRequestAPIView.as_view()
 
 
 class PasswordTokenVerifyAPIView(generics.GenericAPIView):
+    @extend_schema(
+        summary="Password token verify view",
+        description="Password token verify view",
+        tags=["Authentication"],
+    )
     def get(self, request, uidb64, token):
         try:
             id = smart_str(urlsafe_base64_decode(uidb64))
@@ -166,6 +168,12 @@ password_reset_confirm_view = PasswordTokenVerifyAPIView.as_view()
 class SetNewPasswordAPIView(generics.GenericAPIView):
     serializer_class = SetNewPasswordSerializer
 
+    @extend_schema(
+        request=SetNewPasswordSerializer,
+        responses={200: SetNewPasswordSerializer},
+        description="Set new password view",
+        tags=["Authentication"],
+    )
     def patch(self, request):
         serializer = self.serializer_class(data=request.data)
         serializer.is_valid(raise_exception=True)
