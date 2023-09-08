@@ -6,7 +6,6 @@ from django.contrib.auth import get_user_model, authenticate
 from django.contrib.auth.tokens import PasswordResetTokenGenerator
 from django.utils.encoding import smart_str, force_str, force_bytes, DjangoUnicodeDecodeError
 from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
-from .utils import Util
 
 User = get_user_model()
 
@@ -83,28 +82,32 @@ class ResetPasswordEmailRequestSerializer(serializers.Serializer):
 
     class Meta:
         fields = ['email']
-        
+
+
+class SetNewPasswordSerializer(serializers.Serializer):
+    password = serializers.CharField(min_length=8, max_length=68, write_only=True)
+    token = serializers.CharField(min_length=1, write_only=True)
+    uidb64 = serializers.CharField(min_length=1, write_only=True)
+
+    class Meta:
+        fields = ['password', 'token', 'uidb64']
+
     def validate(self, attrs):
-        email = attrs["data"].get('email', '')
-        if User.objects.filter(email=email).exists():
-            user = User.objects.get(email=email)
-            uidb64 = urlsafe_base64_encode(force_bytes(user.pk))
-            token = PasswordResetTokenGenerator().make_token(user)
+        try:
+            password = attrs.get('password')
+            token = attrs.get('token')
+            uidb64 = attrs.get('uidb64')
 
-            current_site = get_current_site(request=attrs["data"].get("request")).domain
-            relativeLink = reverse("authentication:password_reset_confirm", kwargs={'uidb64': uidb64, 'token': token})
-            absurl = "http://" + current_site + relativeLink
-            email_body = "Hi \n" +  " Use the link below to reset your password \n" + absurl
-            data = {
-                "subject": "Reset your password",
-                "email_body": email_body,
-                "to_email": user.email,
-            }
-            Util.send_email(data)
+            id = force_str(urlsafe_base64_decode(uidb64))
+            user = User.objects.get(pkid=id)
 
-        else:
-            raise serializers.ValidationError(
-                {'email': ('There is no user with this email')})
-        
-        return attrs
-    
+            if not PasswordResetTokenGenerator().check_token(user, token):
+                raise AuthenticationFailed('The reset link is invalid', 401)
+
+            user.set_password(password)
+            user.save()
+            
+            return user
+
+        except Exception as e:
+            raise AuthenticationFailed(f'An error occurred {e}', 401)

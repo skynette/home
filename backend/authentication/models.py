@@ -1,3 +1,4 @@
+from typing import Dict
 from django.db import models
 from models.base import BaseModel
 from django.contrib.auth.models import AbstractUser, BaseUserManager
@@ -38,6 +39,11 @@ class User(AbstractUser, BaseModel):
     is_verified = models.BooleanField(default=False)
     is_staff = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
+    # phone = phonenum field
+
+    company_name = models.CharField(max_length=255, null=True, blank=True)
+    bio = models.TextField(blank=True, null=True, max_length=1024)
+    social_media = models.JSONField(blank=True, null=True)
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = ['username']
@@ -46,6 +52,14 @@ class User(AbstractUser, BaseModel):
 
     def __str__(self):
         return self.email
+
+    @property
+    def get_full_name(self) -> str:
+        return f"{self.first_name.title()} {self.last_name.title()}"
+
+    @property
+    def get_social_media(self) -> Dict:
+        return {}
 
     def tokens(self):
         refresh = RefreshToken.for_user(self)
