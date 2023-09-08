@@ -14,9 +14,12 @@ import Message from './components/Message';
 import Properties from './components/Properties';
 import Reviews from './components/Reviews';
 import Favourites from './components/Favourites';
+import DarkModeToggle from './components/DarkMode';
 
 const App = () => {
   return (
+    <>
+    <DarkModeToggle/>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home/>}/>
@@ -37,7 +40,7 @@ const App = () => {
         <Route path="/profile/:id" element={<ProfileDetail/>}/>
       </Routes>
     </BrowserRouter>
-    
+    </>
   )
 }
 
