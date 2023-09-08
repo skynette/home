@@ -31,8 +31,8 @@ const CarouselComponent = () => {
 	}, []);
 
 	const settings = {
-		dots: (slides === 1)? false: true,
-		arrows: (slides === 1)? true: false,
+		dots: (slides === 1) ? false : true,
+		arrows: (slides === 1) ? true : false,
 		infinite: true,
 		speed: 500,
 		slidesToShow: slides,
@@ -43,21 +43,23 @@ const CarouselComponent = () => {
 		<div className="w-[90vw] sm:w-[80vw] mt-10">
 			<Slider {...settings}>
 				{cardGroup.map((card, j) => (
-					<Card
-						key={j}
-						type={card.type}
-						price={card.price}
-						img={card.img}
-						name={card.name}
-						location={card.location}
-						beds={card.beds}
-						baths={card.bath}
-						sqft={card.sqft}
-						profileimg={card.profileImg}
-						profilename={card.profileName}
-						date={card.date}
-						mode={card.mode}
-					/>
+					<div className="my-4">
+						<Card
+							key={j}
+							type={card.type}
+							price={card.price}
+							img={card.img}
+							name={card.name}
+							location={card.location}
+							beds={card.beds}
+							baths={card.bath}
+							sqft={card.sqft}
+							profileimg={card.profileImg}
+							profilename={card.profileName}
+							date={card.date}
+							mode={card.mode}
+						/>
+					</div>
 				))}
 			</Slider>
 		</div>

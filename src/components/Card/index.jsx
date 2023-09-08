@@ -20,7 +20,7 @@ const Card = (props) => {
 	} = props;
 
 	return (
-		<div className=" w-[93%] my-6 pb-6 m-auto bg-body-300 shadow-md hover:shadow-lg transform hover:scale-[1.02] hover:transition-transform hover:duration-500 rounded-lg flex flex-col items-center justify-center font-main">
+		<div className=" w-[93%] my-2 pb-6 m-auto bg-body-300 shadow-md hover:shadow-lg transform hover:scale-[1.02] hover:transition-transform hover:duration-500 rounded-lg flex flex-col items-center justify-center font-main">
 			<div className="m-2 h-[98%] w-[95%] overflow-hidden">
 				<div className="aspect-video relative">
 					<img
