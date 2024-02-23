@@ -3,6 +3,7 @@ import { HiLockClosed, HiUser } from 'react-icons/hi';
 import { useNavigate } from 'react-router-dom';
 import { MdEmail } from 'react-icons/md';
 import { AiOutlineCaretDown } from 'react-icons/ai';
+import img from "../../assets/joel-filipe-RFDP7_80v5A-unsplash.jpg";
 import { Link } from 'react-router-dom';
 
 const Register = () => {
@@ -26,7 +27,7 @@ const Register = () => {
                 <div className='flex justify-around'>
 
                     {/* left side */}
-                    <img src="src/assets/joel-filipe-RFDP7_80v5A-unsplash.jpg" className='w-[40%] mx-6 my-4 ml-9 rounded-lg hidden sm:block object-cover' />
+                    <img src={img} className='w-[40%] mx-6 my-4 ml-9 rounded-lg hidden sm:block object-cover' />
 
                     {/* right side */}
                     <div className='mx-6 my-4 w-[100%] sm:w-[45%]'>

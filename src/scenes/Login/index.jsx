@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { HiUser, HiLockClosed } from "react-icons/hi";
 import { FaFacebookF, FaGoogle } from "react-icons/fa";
+import img from "../../assets/jason-briscoe-UV81E0oXXWQ-unsplash.jpg";
 import { Link } from 'react-router-dom';
 
 const Login = () => {
@@ -23,7 +24,7 @@ const Login = () => {
                 <div className='flex justify-between'>
 
                     {/* left side */}
-                    <img src="src/assets/jason-briscoe-UV81E0oXXWQ-unsplash.jpg" style={{ objectFit: 'cover' }} className='w-[40%] mx-6 my-4 ml-9 rounded-lg hidden sm:block' />
+                    <img src={img} style={{ objectFit: 'cover' }} className='w-[40%] mx-6 my-4 ml-9 rounded-lg hidden sm:block' />
 
                     {/* right side */}
                     <div className='mx-6 my-4 w-[100%] sm:w-[45%]'>
