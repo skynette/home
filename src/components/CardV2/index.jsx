@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const CardV2 = (props) => {
 	const {
@@ -8,8 +9,14 @@ const CardV2 = (props) => {
         name
 	} = props;
 
+	const navigate = useNavigate();
+
+	const handleClick = () =>{
+		navigate("/house/123");
+	}
+
 	return (
-		<div className="h-[28vh] w-[100%] bg-body-300 m-auto transform hover:scale-[1.02] hover:transition-transform hover:duration-500 rounded-lg mb-2 flex flex-col items-center justify-center font-main">
+		<div onClick={handleClick} className="h-[28vh] w-[100%] bg-body-300 m-auto transform hover:scale-[1.02] hover:transition-transform hover:duration-500 rounded-lg mb-2 flex flex-col items-center justify-center font-main">
 			<div className="m-2 h-[98%] w-[95%] overflow-hidden">
 				<div className="w-[100%] h-[100%] relative">
 					<img

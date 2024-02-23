@@ -1,11 +1,18 @@
 import React from 'react'
 import { CiLocationOn } from 'react-icons/ci'
+import { useNavigate } from 'react-router-dom';
 
 const CardV4 = (props) => {
     const { mode, img, name, price, location} = props;
 
+    const navigate = useNavigate();
+
+	const handleClick = () =>{
+		navigate("/house/123");
+	}
+
     return (
-        <div className='flex gap-6 w-[100%]'>
+        <div onClick={handleClick} className='flex gap-6 w-[100%]'>
             <div className='relative w-[33.3333%]'>
                 <img src={img} className='h-[15vh] w-full object-center object-cover rounded-md' />
                 <div className='p-1 rounded-sm text-body-300 bg-cred-500 absolute left-4 top-6 text-sm'>For {mode}</div>

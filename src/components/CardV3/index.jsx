@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const CardV3 = (props) => {
     const {
@@ -9,8 +10,16 @@ const CardV3 = (props) => {
         baths,
         sqft,
     } = props;
+
+
+    const navigate = useNavigate();
+
+	const handleClick = () =>{
+		navigate("/house/123");
+	}
+
     return (
-        <div className='flex w-[80%] gap-3'>
+        <div onClick={handleClick} className='flex w-[80%] gap-3'>
             <img className="w-[30%] h-[10vh] object-center object-cover rounded-md" src={img} />
             <div>
                 <h3 className='font-semibold text-body-800 text-lg'>{name}</h3>

@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
   const [isBuy, setIsBuy] = useState(true)
@@ -10,6 +11,25 @@ const Hero = () => {
     setIsBuy(false)
 
   }
+
+    const navigate = useNavigate();
+   
+
+    const [title, setTitle] = useState("");
+
+    const handleChange = (e)=>{
+        setTitle(e.target.value);
+    }
+
+    const handleSearchClick = ()=>{
+        if(title.length > 0){
+          navigate(`/search/${title}`);
+        }
+    }
+
+    
+      
+    
 
   return (
     <div className="h-[95vh] flex flex-col justify-center items-center text-white gap-4">
@@ -32,7 +52,7 @@ const Hero = () => {
 
       {/* search and filter inputs */}
       <div className="flex flex-col md:flex-row gap-1 items-center bg-body-300 p-1 rounded-md text-body-600 w-5/6 md:w-[50%] md:h-16 my-4">
-        <input type="text" name="title" placeholder="Title" className="w-full md:w-1/4 px-4 py-2 outline-none border border-gray-300 rounded-md" />
+        <input onChange={handleChange} type="text" name="title" placeholder="Title" className="w-full md:w-1/4 px-4 py-2 outline-none border border-gray-300 rounded-md" value={title}/>
         <div className="relative w-full md:w-1/4">
           <select name="category" className="border border-gray-300 rounded-md w-full py-2 px-4 outline-none">
             <option value="">All Categories</option>
@@ -45,7 +65,7 @@ const Hero = () => {
           <input type="text" placeholder="Location" className="border border-gray-300 rounded-md w-full py-2 px-4 outline-none" />
             
         </div>
-        <button type="button" className="bg-cred-500 text-body-300 px-4 py-2 w-full md:w-1/4 hover:bg-opacity-80 rounded-lg">Apply</button>
+        <button onClick={handleSearchClick} type="button" className="bg-cred-500 text-body-300 px-4 py-2 w-full md:w-1/4 hover:bg-opacity-80 rounded-lg">Apply</button>
       </div>
 
 

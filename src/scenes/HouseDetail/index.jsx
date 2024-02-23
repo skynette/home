@@ -63,11 +63,18 @@ const HouseDetail = () => {
     } else {
       document.body.style.overflow = 'auto';   // Enable scrolling
     }
-
+    
     return () => {
       document.body.style.overflow = 'auto';   // Re-enable scrolling when component unmounts
     };
   }, [modalOpen]);
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }, [])
 
 
   const settings = {
