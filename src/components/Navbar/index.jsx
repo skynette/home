@@ -24,7 +24,7 @@ const Navbar = (props) => {
 					{/* left side */}
 					<div>
 						<h1 onClick={()=>{navigate("/")}} className={`text-2xl text-${color} hover:cursor-pointer`}>
-							Home
+							Homehaven
 						</h1>
 					</div>
 
